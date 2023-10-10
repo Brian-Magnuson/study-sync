@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .home h1 {
@@ -54,8 +55,9 @@
 
 .column {
   float: left;
-  width: 25Vw;
-  box-shadow: inset 0 0 0 2px red; 
+  width: 20Vw;
+  max-height: 60vh; 
+  margin-left: 2rem;
 }
 
 /* Clear floats after the columns */
@@ -66,17 +68,21 @@
 }
 
 .topic{
-  /* align */
-  /* height: calc(100vh - var(--nav-h)); */
-  /* content */
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
   align-items: center;
-  box-shadow: inset 0 0 0 2px blue; 
-
+  height: 10vh;
+  background-color: var(--blue-0);
+  margin-bottom: .5rem;
+  border-radius: 2rem;
 }
 .topic img {
-  border-radius: 10%;
-  width: 60%;
+  border-radius: 15%;
+  max-width: 45%;  
 }
+
+.home h1 {
+  left: 50%;
+  text-align: center;
+  color: var(--blue-0);
+}
+
