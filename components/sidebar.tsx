@@ -23,8 +23,7 @@ function handleClick(page: string) {
 
   return (
     <main className={s.sidebar}>
-      <div className={s.row}>
-        <div className={s.column}>
+        <div className={s.bar}>
             {yourTopicsJson.topics.map(({ logo,page })=>
             <img
             src = {logo}
@@ -34,7 +33,6 @@ function handleClick(page: string) {
             <img className={s.addtopic}
             src='https://static-00.iconduck.com/assets.00/plus-square-icon-2048x2048-63y4iawk.png'
             onClick={() => push('SearchTopics')}/>
-        </div>
         </div>
     </main>
   );
