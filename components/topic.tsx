@@ -11,8 +11,7 @@ interface FormatDateProps {
 export default function Topic({ name, logo, page }: FormatDateProps): JSX.Element {
   const { push } = useRouter();
   function handleClick() {
-    push('topics/'+page)
-    
+    push('topics/'+page)  
 } 
     return (
       <div

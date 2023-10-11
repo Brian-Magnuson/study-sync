@@ -1,7 +1,8 @@
+"use client"
+import { useRouter } from 'next/navigation'
 import React from 'react';
-import Topic from '../../components/topic'
-import s from './home.module.css'
-import Sidebar from '../../components/sidebar'
+import s from '../app/home/home.module.css';
+
 export default function HomePage() {
 
 let yourTopicsJson = { topics:[
@@ -15,37 +16,26 @@ let yourTopicsJson = { topics:[
   },
 ]}
 
-let suggestedTopicsJson = { topics:[
-  {"name": 'Networking', 
-  "logo":'https://media.geeksforgeeks.org/wp-content/uploads/20230406152358/CN-(1).jpg', 
-  "page": 'NET'
-  },
-]}
+const { push } = useRouter();
+function handleClick(page: string) {
+  push('topics/'+page)  
+} 
 
   return (
-    <main className={s.home}>
-      <Sidebar/>
+    <main className={s.sidebar}>
       <div className={s.row}>
         <div className={s.column}>
-          <h1>Suggested Topics</h1>
-          {suggestedTopicsJson.topics.map(({name, logo, page})=>
-          <Topic
-          name = {name}
-          logo = {logo}
-          page = {page}/>
-          )}
+            {yourTopicsJson.topics.map(({ logo,page })=>
+            <img
+            src = {logo}
+            onClick={() => handleClick(page)} />
+            
+            )}
+            <img className={s.addtopic}
+            src='https://static-00.iconduck.com/assets.00/plus-square-icon-2048x2048-63y4iawk.png'
+            onClick={() => push('SearchTopics')}/>
         </div>
-
-        <div className={s.column}>
-        <h1>    Your Topics</h1>
-        {yourTopicsJson.topics.map(({name, logo, page})=>
-          <Topic
-          name = {name}
-          logo = {logo}
-          page = {page}/>
-          )}
         </div>
-      </div>
     </main>
   );
 }

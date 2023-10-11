@@ -74,7 +74,13 @@
   background-color: var(--blue-0);
   margin-bottom: .5rem;
   border-radius: 2rem;
+  cursor: pointer;
 }
+
+.topic:hover {
+transform: scale(1.02);
+}
+
 .topic img {
   border-radius: 15%;
   max-width: 45%;  
@@ -86,3 +92,27 @@
   color: var(--blue-0);
 }
 
+.sidebar {
+  position: absolute;
+  left: 0;
+  width: 10vw;
+  height: calc(100vh - var(--nav-h));
+  background-color: var(--blue-0);
+}
+
+.sidebar img {
+  border-radius: 15%;
+  max-width: 25%;  
+  margin-top: 4%;
+  margin-left: 4%;
+  cursor: pointer;
+  display: block
+}
+
+.sidebar img:hover {
+  transform: scale(1.02);
+  }
+
+.addtopic {
+  filter: brightness(0) invert(1);
+}
