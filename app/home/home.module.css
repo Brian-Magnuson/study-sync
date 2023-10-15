@@ -56,7 +56,7 @@
 .column {
   float: left;
   width: 20Vw;
-  max-height: 60vh; 
+  max-height: 60vh;
   margin-left: 2rem;
 }
 
@@ -74,7 +74,7 @@
   margin-top: 15vh;
 }
 
-.topic{
+.topic {
   display: flex;
   align-items: center;
   height: 10vh;
@@ -85,46 +85,16 @@
 }
 
 .topic:hover {
-transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .topic img {
   border-radius: 15%;
-  max-width: 45%;  
+  max-width: 45%;
 }
 
 .home h1 {
   left: 50%;
   text-align: center;
   color: var(--blue-0);
-}
-
-.sidebar {
-  width: 210px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: var(--blue-0);
-}
-
-.sidebar img {
-  border-radius: 15%;
-  max-width: 110px;  
-  margin-top: 4%;
-  cursor: pointer;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.sidebar img:hover {
-  transform: scale(1.02);
-}
-
-.bar {
-  float: left;
-  width: 20Vw;
-  margin-left: 2rem;
-}
-  
-.addtopic {
-  filter: brightness(0) invert(1);
 }

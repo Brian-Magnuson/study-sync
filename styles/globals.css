@@ -31,10 +31,15 @@
   --nav-h: 56px;
 
   --blue-0: #404d98;
+  /* blue-1 will be the above, but slightly ligher */
+  --blue-1: #4d5baa;
+  --blue-2: #5b6ab9;
   --blue-10: #f3f3ff;
   --blue-bg: linear-gradient(90deg, white, var(--blue-10), white);
   /* --blue: #3c95ba; */
   /* --cyan: #32bfc0; */
+
+  --charcoal: #3c3c3c;
 }
 
 body {
@@ -59,4 +64,67 @@ body {
   /* style */
   font-size: 1.4rem;
   font-weight: 700;
+}
+
+.sidebar {
+  /* align */
+  width: 100px;
+  /* style */
+  background-color: var(--blue-2);
+  /* content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 0.5rem;
+}
+
+.sidebar img {
+  /* align */
+  max-width: 110px;
+  /* style */
+  border-radius: 15%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.sidebar img:hover {
+  transform: scale(1.02);
+}
+
+.sidebar a {
+  /* align */
+  position: relative;
+}
+
+.sidebar__topic-tooltip {
+  /* align */
+  display: none;
+  width: max-content;
+  max-width: 175px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  left: 70px;
+  /* style */
+  background-color: var(--charcoal);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.sidebar a:hover .sidebar__topic-tooltip {
+  display: block;
+}
+
+/* .bar {
+  float: left;
+  width: 20Vw;
+  margin-left: 2rem;
+} */
+
+.addtopic {
+  filter: brightness(0) invert(1);
 }
