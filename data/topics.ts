@@ -18,6 +18,19 @@ export const topicsData: TopicsData[] = [
   },
 ]
 
+export const suggestedTopicsData: TopicsData[] = [
+  {
+    id: 'phy2048',
+    name: 'Physics 1',
+    logo: '/topics-icons/science.png',
+  },
+  {
+    id: 'enc3246',
+    name: 'Professional Communication',
+    logo: '/topics-icons/documents.png',
+  }
+]
+
 
 
 /*

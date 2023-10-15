@@ -1,29 +1,28 @@
-"use client"
-import { useRouter } from 'next/navigation'
-import React from 'react';
-import s from '../app/home/home.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 type FormatDateProps = {
   name: string
   logo: string
   page: string
 }
-export default function Topic({ name, logo, page }: FormatDateProps): JSX.Element {
-  const { push } = useRouter();
-  function handleClick() {
-    push('topics/' + page)
-  }
+export default function Topic(props: FormatDateProps): JSX.Element {
+
   return (
-    <div
-      onClick={handleClick}>
-      <main className={s.topic}>
-        <div className={s.column}>
-          <img src={logo} alt="Image" />
+    <Link
+      href={`/topics/${props.page}`}
+    >
+      <div className="topic">
+        <Image
+          src={props.logo}
+          alt=""
+          width={64}
+          height={64}
+        />
+        <div className="topic__text">
+          <h4>{props.name}</h4>
         </div>
-        <div className={s.column}>
-          <h2>{name}</h2>
-        </div>
-      </main>
-    </div>
+      </div>
+    </Link>
   );
 }

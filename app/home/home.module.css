@@ -6,13 +6,38 @@
   flex-direction: row;
   /* justify-content: space-between; */
   /* align-items: center; */
-  color: white;
 }
 
-.home h1 {
+.home section {
   /* align */
-  margin-bottom: 1rem;
+  width: calc(100% - 100px);
+  /* content */
+  padding: 1rem;
 }
+
+.home__topics {
+  /* align */
+  width: 100%;
+  margin-top: 50px;
+  /* style */
+  /* background: blue; */
+  /* content */
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.home__topics_column {
+  /* align */
+  flex: 1;
+  /* style */
+  /* background: red; */
+  /* content */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
 
 .home form {
   /* align */
