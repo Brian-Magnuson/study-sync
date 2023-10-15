@@ -84,6 +84,68 @@ h3 {
   padding: 0 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.nav button {
+  /* style */
+  background: white;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--charcoal);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* content */
+  padding: 0.5rem 1rem;
+}
+
+.nav button:hover {
+  background: #eee;
+}
+
+.nav__account {
+  /* content */
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__account:hover {
+  /* style */
+  cursor: pointer;
+}
+
+.nav__account-img-container {
+  /* align */
+  width: 36px;
+  height: 36px;
+  /* style */
+  border-radius: 50%;
+  background-color: white;
+  color: var(--charcoal);
+  /* content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__account-menu {
+  /* align */
+  display: none;
+  position: absolute;
+  top: 50px;
+  /* style */
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  /* content */
+  padding: 0.5rem;
+}
+
+.nav__account-menu--show {
+  display: block;
 }
 
 .nav h1 {
