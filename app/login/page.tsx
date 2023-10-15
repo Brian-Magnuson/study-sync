@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './login.module.css';
+import s from './Login.module.css';
 
 export default function LoginPage() {
 
