@@ -171,15 +171,20 @@ h3 {
   /* align */
   max-width: 110px;
   /* style */
-  border-radius: 20%;
+  border-radius: 50%;
   cursor: pointer;
   object-fit: cover;
   background: white;
+  transition: linear 0.1s;
 }
 
 
-.sidebar img:hover {
+.sidebar img:hover,
+.sidebar__home-btn:hover {
+  /* style */
   transform: scale(1.02);
+  border-radius: 20%;
+  transition: linear 0.1s;
 }
 
 .sidebar a {
@@ -224,9 +229,10 @@ h3 {
   height: 64px;
   width: 64px;
   /* style */
-  border-radius: 20%;
+  border-radius: 50%;
   background-color: white;
   color: var(--blue-2);
+  transition: linear 0.1s;
   /* content */
   display: flex;
   align-items: center;
@@ -237,6 +243,11 @@ h3 {
   /* style */
   font-size: 2rem;
   /* font-weight: 700; */
+}
+
+.sidebar .sidebar__topic--active {
+  /* style */
+  border-radius: 20%;
 }
 
 /* .bar {

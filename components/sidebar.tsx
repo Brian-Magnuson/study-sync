@@ -1,16 +1,26 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import { topicsData } from '@/data/topics';
 
 export default function Sidebar() {
+
+  const pathname = usePathname();
+  console.log(pathname);
 
   return (
     <nav className="sidebar">
       <Link
         href="/home"
       >
-        <div className="sidebar__home-btn">
+        <div className={
+          pathname === '/home'
+            ? 'sidebar__home-btn sidebar__topic--active'
+            : 'sidebar__home-btn'
+        }>
           <span className="material-symbols-outlined">
             home
           </span>
@@ -29,6 +39,9 @@ export default function Sidebar() {
             href={`/topics/${topic.id}`}
           >
             <Image
+              className={
+                pathname.startsWith(`/topics/${topic.id}`) ? 'sidebar__topic--active' : ''
+              }
               src={topic.logo}
               alt=""
               width={64}
