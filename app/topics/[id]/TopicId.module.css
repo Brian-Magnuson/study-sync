@@ -1,0 +1,6 @@
+.topic_page {
+  /* align */
+  height: calc(100vh - var(--nav-h));
+  /* content */
+  display: flex;
+}

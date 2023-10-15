@@ -7,6 +7,21 @@ export default function Sidebar() {
 
   return (
     <nav className="sidebar">
+      <Link
+        href="/home"
+      >
+        <div className="sidebar__home-btn">
+          <span className="material-symbols-outlined">
+            home
+          </span>
+        </div>
+        <div className="sidebar__topic-tooltip">
+          Home
+        </div>
+      </Link>
+
+      <hr />
+
       {topicsData.map((topic) =>
         <>
           <Link

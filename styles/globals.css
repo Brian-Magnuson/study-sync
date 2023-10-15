@@ -171,10 +171,12 @@ h3 {
   /* align */
   max-width: 110px;
   /* style */
-  border-radius: 15%;
+  border-radius: 20%;
   cursor: pointer;
   object-fit: cover;
+  background: white;
 }
+
 
 .sidebar img:hover {
   transform: scale(1.02);
@@ -183,6 +185,8 @@ h3 {
 .sidebar a {
   /* align */
   position: relative;
+  /* style */
+  text-decoration: none;
 }
 
 .sidebar__topic-tooltip {
@@ -205,6 +209,34 @@ h3 {
 
 .sidebar a:hover .sidebar__topic-tooltip {
   display: block;
+}
+
+.sidebar hr {
+  /* align */
+  margin: 5px 0;
+  /* style */
+  width: 80%;
+  border: 1px solid lightgray;
+}
+
+.sidebar__home-btn {
+  /* align */
+  height: 64px;
+  width: 64px;
+  /* style */
+  border-radius: 20%;
+  background-color: white;
+  color: var(--blue-2);
+  /* content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar__home-btn span {
+  /* style */
+  font-size: 2rem;
+  /* font-weight: 700; */
 }
 
 /* .bar {
