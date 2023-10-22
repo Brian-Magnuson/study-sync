@@ -17,6 +17,15 @@
   flex-direction: column;
 }
 
+.discussion_page__posts {
+  /* align */
+  margin-top: 10px;
+  /* content */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .discussion_page form {
   /* align */
   width: 100%;

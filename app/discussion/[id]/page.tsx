@@ -3,6 +3,9 @@
 import Sidebar from '@/components/Sidebar';
 import React from 'react';
 import s from './DiscussionId.module.css';
+import { postData } from '@/data/posts';
+
+import Post from '@/components/Post';
 
 type DiscussionIdPageProps = {
   params: {
@@ -15,11 +18,23 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
     e.preventDefault();
   }
 
+  const posts = postData.map((post) => (
+    <Post
+      key={post.id}
+      postData={post}
+    />
+  ));
+
+
   return (
     <main className={s.discussion_page}>
       <Sidebar />
       <section>
         <h2>Operating Systems</h2>
+
+        <div className={s.discussion_page__posts}>
+          {posts}
+        </div>
 
         <form onSubmit={handleSubmit}>
           <label

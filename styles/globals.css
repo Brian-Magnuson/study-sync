@@ -280,3 +280,32 @@ h3 {
   border-radius: 0.3rem;
   object-fit: cover;
 }
+
+.post {
+  /* style */
+  background: white;
+  border-radius: 0.5rem;
+  /* content */
+  padding: 0.8rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.post img {
+  /* style */
+  border-radius: 0.3rem;
+  object-fit: cover;
+}
+
+.post__text-header {
+  /* content */
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.post__text-header span {
+  /* style */
+  font-size: 0.8rem;
+  color: gray;
+}
