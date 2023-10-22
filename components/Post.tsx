@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Post } from '@/data/posts';
 
 type PostProps = {
@@ -18,6 +19,17 @@ export default function Post(props: PostProps) {
   };
   const formattedDate = date.toLocaleString('en-US', options);
 
+  const attachments = props.postData.attachments?.map((attachment, index) => (
+    <div className="post__attachment" key={index}>
+      <span className="material-symbols-outlined">
+        draft
+      </span>
+      <Link href={attachment.path}>
+        {attachment.name}
+      </Link>
+    </div>
+  ));
+
   return (
     <div className="post">
       <Image
@@ -32,6 +44,7 @@ export default function Post(props: PostProps) {
           <span>{formattedDate}</span>
         </div>
         <p>{props.postData.content}</p>
+        {attachments && attachments}
       </div>
     </div>
   );

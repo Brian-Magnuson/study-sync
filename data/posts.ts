@@ -1,10 +1,16 @@
 
+type File = {
+  name: string,
+  path: string,
+}
+
 export type Post = {
   id: string,
   timestamp: string,
   author: string,
   authorImgUrl: string,
   content: string,
+  attachments?: File[],
 }
 
 export const postData: Post[] = [
@@ -21,5 +27,11 @@ export const postData: Post[] = [
     author: 'John',
     authorImgUrl: 'https://picsum.photos/id/237/200',
     content: 'The user interface is the part of the operating system that the user interacts with. It is the most visible part of the OS.',
+    attachments: [
+      {
+        name: 'os-stuff.md',
+        path: '/user-data/os-stuff.md',
+      }
+    ]
   },
 ]

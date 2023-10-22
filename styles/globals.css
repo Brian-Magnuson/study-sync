@@ -309,3 +309,22 @@ h3 {
   font-size: 0.8rem;
   color: gray;
 }
+
+.post__text p {
+  /* align */
+  margin-bottom: 10px;
+}
+
+.post__attachment {
+  /* align */
+  max-width: 150px;
+  /* style */
+  border: 1px solid lightgray;
+  border-radius: 0.2rem;
+  background: #efefef;
+  color: gray;
+  /* content */
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
