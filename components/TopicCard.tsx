@@ -6,11 +6,11 @@ type FormatDateProps = {
   logo: string
   page: string
 }
-export default function Topic(props: FormatDateProps): JSX.Element {
+export default function TopicCard(props: FormatDateProps): JSX.Element {
 
   return (
     <Link
-      href={`/topics/${props.page}`}
+      href={`/discussion/${props.page}`}
     >
       <div className="topic">
         <Image

@@ -1,5 +1,5 @@
 import React from 'react';
-import Topic from '@/components/Topic'
+import TopicCard from '@/components/TopicCard'
 import s from './Home.module.css'
 import Sidebar from '@/components/Sidebar'
 import { topicsData, suggestedTopicsData } from '@/data/topics';
@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className={s.home__topics_column}>
             <h3>Your Topics</h3>
             {topicsData.map(({ name, logo, id }) =>
-              <Topic
+              <TopicCard
                 key={id}
                 name={name}
                 logo={logo}
@@ -51,7 +51,7 @@ export default function HomePage() {
           <div className={s.home__topics_column}>
             <h3>Suggested Topics</h3>
             {suggestedTopicsData.map((topic) =>
-              <Topic
+              <TopicCard
                 key={topic.id}
                 name={topic.name}
                 logo={topic.logo}

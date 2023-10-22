@@ -36,11 +36,11 @@ export default function Sidebar() {
         <>
           <Link
             key={topic.id}
-            href={`/topics/${topic.id}`}
+            href={`/discussion/${topic.id}`}
           >
             <Image
               className={
-                pathname.startsWith(`/topics/${topic.id}`) ? 'sidebar__topic--active' : ''
+                pathname.startsWith(`/discussion/${topic.id}`) ? 'sidebar__topic--active' : ''
               }
               src={topic.logo}
               alt=""

@@ -1,4 +1,4 @@
-.topic_page {
+.discussion_page {
   /* align */
   height: calc(100vh - var(--nav-h));
   width: 100%;
@@ -6,7 +6,7 @@
   display: flex;
 }
 
-.topic_page section {
+.discussion_page section {
   /* align */
   width: 100%;
   /* style */
@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 
-.topic_page form {
+.discussion_page form {
   /* align */
   width: 100%;
   margin-top: auto;
@@ -28,7 +28,7 @@
   justify-content: space-between;
 }
 
-.topic_page form input {
+.discussion_page form input {
   /* align */
   min-height: 36px;
   flex: 1;
@@ -41,7 +41,7 @@
   padding: 0.5rem 1rem;
 }
 
-.topic_page input[type="file"] {
+.discussion_page input[type="file"] {
   /* style */
   display: none;
 }

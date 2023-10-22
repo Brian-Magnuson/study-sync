@@ -2,21 +2,21 @@
 
 import Sidebar from '@/components/Sidebar';
 import React from 'react';
-import s from './TopicId.module.css';
+import s from './DiscussionId.module.css';
 
-type TopicIdPageProps = {
+type DiscussionIdPageProps = {
   params: {
     id: string;
   }
 }
-export default function TopicIdPage(props: TopicIdPageProps) {
+export default function DiscussionIdPage(props: DiscussionIdPageProps) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }
 
   return (
-    <main className={s.topic_page}>
+    <main className={s.discussion_page}>
       <Sidebar />
       <section>
         <h2>Operating Systems</h2>
