@@ -19,10 +19,12 @@
 
 .discussion_page__posts {
   /* align */
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   /* content */
+  overflow-y: scroll;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 1rem;
 }
 
@@ -84,4 +86,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.post__submit_btn[disabled] {
+  /* style */
+  background: var(--charcoal);
+  cursor: not-allowed;
 }

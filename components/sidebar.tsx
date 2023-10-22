@@ -33,7 +33,7 @@ export default function Sidebar() {
       <hr />
 
       {topicsData.map((topic) =>
-        <>
+        <React.Fragment key={topic.id}>
           <Link
             key={topic.id}
             href={`/discussion/${topic.id}`}
@@ -51,7 +51,7 @@ export default function Sidebar() {
               {topic.name}
             </div>
           </Link>
-        </>
+        </React.Fragment>
       )}
       {/* <img className={s.addtopic}
         src='https://static-00.iconduck.com/assets.00/plus-square-icon-2048x2048-63y4iawk.png'

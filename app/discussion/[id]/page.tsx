@@ -14,11 +14,27 @@ type DiscussionIdPageProps = {
 }
 export default function DiscussionIdPage(props: DiscussionIdPageProps) {
 
+  const [postStateData, setPostStateData] = React.useState(postData);
+
+  const [textInput, setTextInput] = React.useState('');
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    postData.unshift({
+      id: `${postData.length + 1}`,
+      author: 'Derrick',
+      authorImgUrl: 'https://picsum.photos/id/443/200',
+      timestamp: new Date().toISOString(),
+      content: textInput,
+    });
+
+    setTextInput('');
+
+    setPostStateData([...postData]);
   }
 
-  const posts = postData.map((post) => (
+  const posts = postStateData.map((post) => (
     <Post
       key={post.id}
       postData={post}
@@ -52,10 +68,13 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
           <input
             type="text"
             placeholder="Message"
+            value={textInput}
+            onChange={(e) => setTextInput(e.target.value)}
           />
           <button
             type="submit"
             className={s.post__submit_btn}
+            disabled={!textInput}
           >
             <span className="material-symbols-outlined">
               send
