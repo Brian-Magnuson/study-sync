@@ -28,10 +28,15 @@
   gap: 1rem;
 }
 
+.discussion_page__attachments {
+  /* align */
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
 .discussion_page form {
   /* align */
   width: 100%;
-  margin-top: auto;
   /* content */
   display: flex;
   align-items: center;

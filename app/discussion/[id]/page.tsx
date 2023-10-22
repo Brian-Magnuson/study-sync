@@ -2,6 +2,7 @@
 
 import Sidebar from '@/components/Sidebar';
 import React from 'react';
+import Link from 'next/link';
 import s from './DiscussionId.module.css';
 import { postData } from '@/data/posts';
 
@@ -17,6 +18,14 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
   const [postStateData, setPostStateData] = React.useState(postData);
 
   const [textInput, setTextInput] = React.useState('');
+  const [fileInput, setFileInput] = React.useState('');
+
+  // React effect to log fileInput when it changes
+  React.useEffect(() => {
+    if (fileInput) {
+      console.log(fileInput);
+    }
+  }, [fileInput]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,12 +33,17 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
     postData.unshift({
       id: `${postData.length + 1}`,
       author: 'Derrick',
-      authorImgUrl: 'https://picsum.photos/id/443/200',
+      authorImgUrl: 'https://picsum.photos/id/433/200',
       timestamp: new Date().toISOString(),
       content: textInput,
+      attachments: fileInput ? [{
+        name: fileInput.split("fakepath\\")[1],
+        path: fileInput
+      }] : undefined
     });
 
     setTextInput('');
+    setFileInput('');
 
     setPostStateData([...postData]);
   }
@@ -41,6 +55,11 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
     />
   ));
 
+  const handleCloseAttachment = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setFileInput('');
+  }
+
 
   return (
     <main className={s.discussion_page}>
@@ -50,6 +69,27 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
 
         <div className={s.discussion_page__posts}>
           {posts}
+        </div>
+
+        <div className={s.discussion_page__attachments}>
+          {fileInput && (
+            <div className="post__attachment">
+              <span className="material-symbols-outlined">
+                draft
+              </span>
+              <Link href="#">
+                {fileInput.split("fakepath\\")[1]}
+              </Link>
+              <button
+                type="button" className="no_button_style"
+                onClick={handleCloseAttachment}
+              >
+                <span className="material-symbols-outlined">
+                  close
+                </span>
+              </button>
+            </div>
+          )}
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -64,6 +104,8 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
           <input
             type="file"
             id="post__file_input"
+            value={fileInput}
+            onChange={(e) => setFileInput(e.target.value)}
           />
           <input
             type="text"

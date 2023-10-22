@@ -1,5 +1,5 @@
 
-type File = {
+type FileInfo = {
   name: string,
   path: string,
 }
@@ -10,7 +10,7 @@ export type Post = {
   author: string,
   authorImgUrl: string,
   content: string,
-  attachments?: File[],
+  attachments?: FileInfo[],
 }
 
 export const postData: Post[] = [
