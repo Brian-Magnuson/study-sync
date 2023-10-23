@@ -15,10 +15,29 @@ type DiscussionIdPageProps = {
 }
 export default function DiscussionIdPage(props: DiscussionIdPageProps) {
 
-  const [postStateData, setPostStateData] = React.useState(postData);
+  const { id } = props.params;
+  
+
+  const [section, setSection] = React.useState<{
+    title: string;
+    posts: {
+      id: string;
+      timestamp: string;
+      author: string;
+      authorImgUrl: string;
+      content: string;
+      attachments?: {
+        name: string;
+        path: string;
+      }[];
+    }[];
+  } | null>(null);
+
+  
 
   const [textInput, setTextInput] = React.useState('');
   const [fileInput, setFileInput] = React.useState('');
+  
 
   // React effect to log fileInput when it changes
   React.useEffect(() => {
@@ -27,33 +46,52 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
     }
   }, [fileInput]);
 
+  React.useEffect(() => {
+    console.log(section);
+  }, [section]);
+
+  
+
+  if (postData) {
+    const findSection = postData.classes.find((p) => p.title === id);
+    if (findSection && section !== findSection) {
+      setSection(findSection);
+    }
+  }
+
+  const [postStateData, setPostStateData] = React.useState(section?.posts);
+
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    postData.unshift({
-      id: `${postData.length + 1}`,
-      author: 'Derrick',
-      authorImgUrl: 'https://picsum.photos/id/433/200',
-      timestamp: new Date().toISOString(),
-      content: textInput,
-      attachments: fileInput ? [{
-        name: fileInput.split("fakepath\\")[1],
-        path: fileInput
-      }] : undefined
-    });
+    if(section){
+      section.posts.unshift({
+        id: `${section.posts.length + 1}`,
+        author: 'Derrick',
+        authorImgUrl: 'https://picsum.photos/id/433/200',
+        timestamp: new Date().toISOString(),
+        content: textInput,
+        attachments: fileInput ? [{
+          name: fileInput.split("fakepath\\")[1],
+          path: fileInput
+        }] : undefined
+      });
 
-    setTextInput('');
-    setFileInput('');
+      setTextInput('');
+      setFileInput('');
 
-    setPostStateData([...postData]);
+      setPostStateData([...section.posts]);
+    }
   }
-
-  const posts = postStateData.map((post) => (
-    <Post
-      key={post.id}
-      postData={post}
-    />
-  ));
+  if(section){
+    const posts = section.posts.map((post) => (
+      <Post
+        key={post.id}
+        postData={post}
+      />
+    ));
+  
 
   const handleCloseAttachment = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -126,4 +164,5 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
       </section>
     </main>
   );
+  }
 }
