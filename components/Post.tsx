@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Post } from '@/data/posts';
+import { PostInfo } from '@/data/posts';
 
 type PostProps = {
-  postData: Post;
+  postData: PostInfo;
 }
 export default function Post(props: PostProps) {
 

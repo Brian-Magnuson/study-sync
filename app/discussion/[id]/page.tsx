@@ -3,8 +3,10 @@
 import Sidebar from '@/components/Sidebar';
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import s from './DiscussionId.module.css';
-import { postData } from '@/data/posts';
+import { topicsData, unjoinedTopicsData } from '@/data/topics';
+import { TopicPostData, postData } from '@/data/posts';
 
 import Post from '@/components/Post';
 
@@ -14,30 +16,37 @@ type DiscussionIdPageProps = {
   }
 }
 export default function DiscussionIdPage(props: DiscussionIdPageProps) {
+  const router = useRouter();
 
   const { id } = props.params;
-  
 
-  const [section, setSection] = React.useState<{
-    title: string;
-    posts: {
-      id: string;
-      timestamp: string;
-      author: string;
-      authorImgUrl: string;
-      content: string;
-      attachments?: {
-        name: string;
-        path: string;
-      }[];
-    }[];
-  } | null>(null);
+  // If the topic is unjoined, remove it from unjoined and add it to topicsData
+  const findTopic = topicsData.find((topic) => topic.id === id);
+  const findUnjoinedTopic = unjoinedTopicsData.find((topic) => topic.id === id);
+  if (findUnjoinedTopic && !findTopic) {
+    topicsData.unshift(findUnjoinedTopic);
+    unjoinedTopicsData.splice(unjoinedTopicsData.indexOf(findUnjoinedTopic), 1);
+  } else if (!findUnjoinedTopic && !findTopic) {
+    router.push("/not-found");
+  }
 
-  
+  const topicName = findTopic?.name;
+
+  // If the topic has no post data, add it to postData
+  let thisPostData = postData.find((post) => post.id === id);
+  if (!thisPostData) {
+    postData.push({
+      id,
+      posts: []
+    });
+    thisPostData = postData[postData.length - 1];
+  }
+
+  const [postStateData, setPostStateData] = React.useState(thisPostData);
 
   const [textInput, setTextInput] = React.useState('');
   const [fileInput, setFileInput] = React.useState('');
-  
+
 
   // React effect to log fileInput when it changes
   React.useEffect(() => {
@@ -47,27 +56,25 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
   }, [fileInput]);
 
   React.useEffect(() => {
-    console.log(section);
-  }, [section]);
+    console.log(postStateData);
+  }, [postStateData]);
 
-  
 
-  if (postData) {
-    const findSection = postData.classes.find((p) => p.title === id);
-    if (findSection && section !== findSection) {
-      setSection(findSection);
-    }
-  }
 
-  const [postStateData, setPostStateData] = React.useState(section?.posts);
+  // if (postData) {
+  //   const findSection = postData.classes.find((p) => p.title === id);
+  //   if (findSection && postStateData !== findSection) {
+  //     setPostStateData(findSection);
+  //   }
+  // }
 
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if(section){
-      section.posts.unshift({
-        id: `${section.posts.length + 1}`,
+    if (thisPostData) {
+      thisPostData.posts.unshift({
+        id: `${thisPostData.posts.length + 1}`,
         author: 'Derrick',
         authorImgUrl: 'https://picsum.photos/id/433/200',
         timestamp: new Date().toISOString(),
@@ -81,17 +88,17 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
       setTextInput('');
       setFileInput('');
 
-      setPostStateData([...section.posts]);
+      setPostStateData({ ...thisPostData });
     }
   }
-  if(section){
-    const posts = section.posts.map((post) => (
-      <Post
-        key={post.id}
-        postData={post}
-      />
-    ));
-  
+
+  const posts = postStateData.posts.map((post) => (
+    <Post
+      key={post.id}
+      postData={post}
+    />
+  ));
+
 
   const handleCloseAttachment = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -103,7 +110,7 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
     <main className={s.discussion_page}>
       <Sidebar />
       <section>
-        <h2>Operating Systems</h2>
+        <h2>{topicName}</h2>
 
         <div className={s.discussion_page__posts}>
           {posts}
@@ -164,5 +171,4 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
       </section>
     </main>
   );
-  }
 }

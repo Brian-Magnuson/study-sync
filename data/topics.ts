@@ -18,7 +18,7 @@ export const topicsData: TopicsData[] = [
   },
 ]
 
-export const suggestedTopicsData: TopicsData[] = [
+export const unjoinedTopicsData: TopicsData[] = [
   {
     id: 'phy2048',
     name: 'Physics 1',
