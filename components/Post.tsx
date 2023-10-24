@@ -42,6 +42,11 @@ export default function Post(props: PostProps) {
         <div className="post__text-header">
           <h4>{props.postData.author}</h4>
           <span>{formattedDate}</span>
+          {props.postData.isResource && (
+            <span className="material-symbols-outlined">
+              bookmark
+            </span>
+          )}
         </div>
         <p>{props.postData.content}</p>
         {attachments && attachments}

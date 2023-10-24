@@ -46,7 +46,10 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
 
   const [textInput, setTextInput] = React.useState('');
   const [fileInput, setFileInput] = React.useState('');
+  const [filterInput, setFilterInput] = React.useState('conversation');
+  const [markResourceInput, setMarkResourceInput] = React.useState(false);
 
+  console.log(filterInput);
 
   // React effect to log fileInput when it changes
   React.useEffect(() => {
@@ -58,16 +61,6 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
   React.useEffect(() => {
     console.log(postStateData);
   }, [postStateData]);
-
-
-
-  // if (postData) {
-  //   const findSection = postData.classes.find((p) => p.title === id);
-  //   if (findSection && postStateData !== findSection) {
-  //     setPostStateData(findSection);
-  //   }
-  // }
-
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -82,27 +75,40 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
         attachments: fileInput ? [{
           name: fileInput.split("fakepath\\")[1],
           path: fileInput
-        }] : undefined
+        }] : undefined,
+        isResource: markResourceInput
       });
 
       setTextInput('');
       setFileInput('');
+      setMarkResourceInput(false);
 
       setPostStateData({ ...thisPostData });
     }
   }
 
-  const posts = postStateData.posts.map((post) => (
-    <Post
-      key={post.id}
-      postData={post}
-    />
-  ));
+  const posts = postStateData.posts.map((post) => {
+    if (filterInput === 'conversation' || post.isResource) {
+      return (
+        <Post
+          key={post.id}
+          postData={post}
+        />
+      );
+    }
+  });
 
+  // Handles inputting a file to an input:file element
+  const handleAttach = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setFileInput(e.currentTarget.value);
+    setMarkResourceInput(true);
+  }
 
   const handleCloseAttachment = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setFileInput('');
+    setMarkResourceInput(false);
   }
 
 
@@ -111,6 +117,37 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
       <Sidebar />
       <section>
         <h2>{topicName}</h2>
+
+        <fieldset className={s.discussion_page__filter}>
+          <input
+            type="radio"
+            name="filter"
+            id="conversation"
+            value="conversation"
+            checked={filterInput === "conversation"}
+            onChange={(e) => setFilterInput(e.target.value)}
+          />
+          <label
+            htmlFor="conversation"
+            className={filterInput === "conversation" ? s.filter__label__active : s.filter__label__inactive}
+          >
+            Conversation
+          </label>
+          <input
+            type="radio"
+            name="filter"
+            id="resources"
+            value="resources"
+            checked={filterInput === "resources"}
+            onChange={(e) => setFilterInput(e.target.value)}
+          />
+          <label
+            htmlFor="resources"
+            className={filterInput === "resources" ? s.filter__label__active : s.filter__label__inactive}
+          >
+            Resources
+          </label>
+        </fieldset>
 
         <div className={s.discussion_page__posts}>
           {posts}
@@ -138,35 +175,47 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
         </div>
 
         <form onSubmit={handleSubmit}>
-          <label
-            htmlFor="post__file_input"
-            className={s.post__file_input_label}
-          >
-            <span className="material-symbols-outlined">
-              attach_file
-            </span>
-          </label>
-          <input
-            type="file"
-            id="post__file_input"
-            value={fileInput}
-            onChange={(e) => setFileInput(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Message"
-            value={textInput}
-            onChange={(e) => setTextInput(e.target.value)}
-          />
-          <button
-            type="submit"
-            className={s.post__submit_btn}
-            disabled={!textInput}
-          >
-            <span className="material-symbols-outlined">
-              send
-            </span>
-          </button>
+          <div className={s.discussion_page__form_upper}>
+            <label
+              htmlFor="post__file_input"
+              className={s.post__file_input_label}
+            >
+              <span className="material-symbols-outlined">
+                attach_file
+              </span>
+            </label>
+            <input
+              type="file"
+              id="post__file_input"
+              value={fileInput}
+              onChange={handleAttach}
+            />
+            <input
+              type="text"
+              placeholder="Message"
+              value={textInput}
+              onChange={(e) => setTextInput(e.target.value)}
+            />
+            <button
+              type="submit"
+              className={s.post__submit_btn}
+              disabled={!textInput && !fileInput}
+            >
+              <span className="material-symbols-outlined">
+                send
+              </span>
+            </button>
+          </div>
+          <div className={s.discussion_page__form_lower}>
+            <input
+              type="checkbox"
+              name="resource"
+              id="resource"
+              checked={markResourceInput}
+              onChange={(e) => setMarkResourceInput(e.target.checked)}
+            />
+            <label htmlFor="resource">Send as Resource</label>
+          </div>
         </form>
       </section>
     </main>

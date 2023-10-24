@@ -11,6 +11,7 @@ export type PostInfo = {
   authorImgUrl: string,
   content: string,
   attachments?: FileInfo[],
+  isResource?: boolean,
 }
 
 export type TopicPostData = {
@@ -33,7 +34,8 @@ export const postData: TopicPostData[] = [
             name: 'os-stuff.md',
             path: '/user-data/os-stuff.md',
           }
-        ]
+        ],
+        isResource: true,
       },
       {
         id: '1',
