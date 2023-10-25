@@ -32,8 +32,8 @@ export const postData: TopicPostData[] = [
         isResource: true,
         attachments: [
           {
-            name: 'OS Midterm Study Guide.pdf',
-            path: '/user-data/OS Midterm Study Guide.pdf',
+            name: 'OS Midterm Study Guide 2.pdf',
+            path: '/user-data/OS Midterm Study Guide 2.pdf',
           }
         ]
       },
@@ -60,8 +60,8 @@ export const postData: TopicPostData[] = [
         isResource: true,
         attachments: [
           {
-            name: 'os-studyguide.docx',
-            path: '/user-data/os-studyguide.docx',
+            name: 'OS Midterm Study Guide.pdf',
+            path: '/user-data/OS Midterm Study Guide.pdf',
           }
         ]
       },
