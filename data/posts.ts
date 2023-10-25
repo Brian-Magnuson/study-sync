@@ -25,6 +25,34 @@ export const postData: TopicPostData[] = [
     posts: [
       {
         id: '1',
+        timestamp: '2023-10-16T13:28:00.000Z',
+        author: 'Rob',
+        authorImgUrl: 'https://picsum.photos/id/412/200',
+        content: 'Okay here is the updated study guide',
+        isResource: true,
+        attachments: [
+          {
+            name: 'OS Midterm Study Guide.pdf',
+            path: '/user-data/OS Midterm Study Guide.pdf',
+          }
+        ]
+      },
+      {
+        id: '2',
+        timestamp: '2023-10-16T12:51:00.000Z',
+        author: 'Kev',
+        authorImgUrl: 'https://picsum.photos/id/367/200',
+        content: 'Hey I noticed an error on the second page, in the dining philosophers section',
+      },
+      {
+        id: '3',
+        timestamp: '2023-10-16T12:50:00.000Z',
+        author: 'Susan',
+        authorImgUrl: 'https://picsum.photos/id/1042/200',
+        content: 'Thanks man',
+      },
+      {
+        id: '4',
         timestamp: '2023-10-16T12:48:00.000Z',
         author: 'Rob',
         authorImgUrl: 'https://picsum.photos/id/412/200',
@@ -38,14 +66,14 @@ export const postData: TopicPostData[] = [
         ]
       },
       {
-        id: '2',
+        id: '5',
         timestamp: '2023-10-14T16:25:00.000Z',
         author: 'John',
         authorImgUrl: 'https://picsum.photos/id/237/200',
         content: 'Make sure you guys have a windows machine or other computer with an x86 processor https://www.eng.ufl.edu/students/advising/fall-semester-checklist/computer-requirements/',
       },
       {
-        id: '3',
+        id: '6',
         timestamp: '2023-10-12T15:29:00.000Z',
         author: 'Susan',
         authorImgUrl: 'https://picsum.photos/id/1042/200',
@@ -59,14 +87,14 @@ export const postData: TopicPostData[] = [
         ]
       },
       {
-        id: '4',
+        id: '7',
         timestamp: '2023-10-12T13:34:00.000Z',
         author: 'Kev',
         authorImgUrl: 'https://picsum.photos/id/367/200',
         content: 'Whats the wad system used in the project?',
       },
       {
-        id: '5',
+        id: '8',
         timestamp: '2023-09-14T18:34:00.000Z',
         author: 'John',
         authorImgUrl: 'https://picsum.photos/id/237/200',
@@ -74,14 +102,14 @@ export const postData: TopicPostData[] = [
         content: 'Here is a link to the syllabus https://www.cise.ufl.edu/~nemo/cop4600/syllabus.html',
       },
       {
-        id: '6',
+        id: '9',
         timestamp: '2023-09-14T18:22:00.000Z',
         author: 'Rob',
         authorImgUrl: 'https://picsum.photos/id/412/200',
         content: 'Does anyone have a link to the syllabus?',
       },
       {
-        id: '7',
+        id: '10',
         timestamp: '2023-08-25T16:45:00.000Z',
         author: 'John',
         authorImgUrl: 'https://picsum.photos/id/237/200',
@@ -95,7 +123,7 @@ export const postData: TopicPostData[] = [
         ]
       },
       {
-        id: '8',
+        id: '11',
         timestamp: '2023-08-22T12:00:00.000Z',
         author: 'Susan',
         authorImgUrl: 'https://picsum.photos/id/1042/200',
