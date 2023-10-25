@@ -135,7 +135,7 @@ export const postData: TopicPostData[] = [
         isResource: true,
         attachments: [ {
           name: 'personas.pdf',
-          path: '/user-data/os-stuff.md',
+          path: '/user-data/personas.pdf',
         }
       ]
       },
@@ -255,8 +255,8 @@ export const postData: TopicPostData[] = [
         content: 'The required parts of the elevator pitch are listed here',
         isResource: true,
         attachments: [ {
-          name: 'ElevatorPitch.pdf',
-          path: '/user-data/ElevatorPitch.pdf',
+          name: 'BasicElevatorPitch.pdf',
+          path: '/user-data/BasicElevatorPitch.pdf',
         }
       ]
       },

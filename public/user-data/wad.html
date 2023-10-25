@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8"/>
+<title>WAD - The Doom Wiki at DoomWiki.org</title>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.state({"skins.monaco":"loading"});});</script>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"WAD","wgTitle":"WAD","wgCurRevisionId":420066,"wgRevisionId":420066,"wgArticleId":535,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Resources","Doom engine"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"WAD","wgRelevantArticleId":535,"wgRequestId":"ca961db8481cd0ab427e221b","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgPreferredVariant":"en","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":3,"quality":2,"pristine":4},"depth":{"levels":3,"quality":1,"pristine":4},"style":{"levels":3,"quality":1,"pristine":4}}},"wgStableRevisionId":420066});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup"]);mw.loader.load("/w/load.php?debug=false\u0026lang=en\u0026modules=skins.monaco\u0026only=scripts\u0026skin=monaco");});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.flaggedRevs.basic%7Cext.gadget.Lightbox%2CMonacoRecentChanges%2CReferenceTooltips%2CUploadToolbar%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content%7Cmediawiki.skinning.content.externallinks%7Cskins.monaco&amp;only=styles&amp;skin=monaco"/>
+<!--[if IE 8]><link rel="stylesheet" href="/w/skins/monaco/style/css/monaco_ie8.css?303" media="screen"/><![endif]--><!--[if gte IE 8]><link rel="stylesheet" href="/w/skins/monaco/style/css/monaco_gteie8.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=monaco"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=monaco"></script>
+<meta name="generator" content="MediaWiki 1.27.4"/>
+<meta name="description" content="WAD (which, according to the Doom Bible, is an acronym for &quot;Where's All the Data?&quot;&amp;#91;1&amp;#93;) is the file format used by Doom and all Doom-engine-based games for storing data. A WAD file consists of a header, a directory, and the data lumps that make up the resources stored within the file. A WAD file can be of two types:"/>
+<meta name="keywords" content="Doom,Wiki,Doom Wiki,DoomWiki,editing,Heretic,Hexen,Strife,Doom II,Doom 2,Doom 3,Doom 4,Doom 2016,Brutal Doom,Final Doom,Chex Quest"/>
+<meta name="google-site-verification" content="gHp62uCXRqigG9MXDhFnQp081Br1tueYQj8f8hSL5p0"/>
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=WAD&amp;action=edit"/>
+<link rel="edit" title="Edit" href="/w/index.php?title=WAD&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/w/images/4/43/Apple-touch-icon.png"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="DoomWiki.org (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://doomwiki.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="/wiki/Doom_Wiki:Copyrights"/>
+<link rel="alternate" type="application/atom+xml" title="DoomWiki.org Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://doomwiki.org/wiki/WAD"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="DoomWiki.org"/>
+<meta property="og:title" content="WAD"/>
+<meta property="og:description" content="WAD (which, according to the Doom Bible, is an acronym for &quot;Where's All the Data?&quot;&amp;#91;1&amp;#93;) is the file format used by Doom and all Doom-engine-based games for storing data. A WAD file consists of a header, a directory, and the data lumps that make up the resources stored within the file. A WAD file can be of two types:"/>
+<meta property="og:url" content="https://doomwiki.org/wiki/WAD"/>
+<meta itemprop="author" content="DoomWiki.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-WAD rootpage-WAD skin-monaco action-view color2 action_view loggedout" id="body">
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "Article",
+	"name": "WAD",
+	"headline": "WAD",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://doomwiki.org/w/images/b/bc/Wiki.png"
+	},
+	"author": {
+		"@type": "Organization",
+		"name": "DoomWiki.org"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "DoomWiki.org",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://doomwiki.org/w/images/b/bc/Wiki.png?version=bf66f6907aca09b3ab9aae061b6f01ec",
+			"width": "135",
+			"height": "135"
+		},
+		"sameAs": [
+			"https://mastodon.gamedev.place/@doomwiki"
+		]
+	},
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://doomwiki.org/w/index.php?title=Special:Search&search={search_term}",
+		"query-input": "required name=search_term"
+	},
+	"datePublished": "2023-10-21T12:15:25Z",
+	"dateModified": "2023-10-21T12:15:25Z",
+	"mainEntityOfPage": "https://doomwiki.org/wiki/WAD"
+}
+</script>
+
+<div id="skiplinks"> 
+	<a class="skiplink" href="#article" tabIndex=1>Skip to Content</a> 
+	<a class="skiplink wikinav" href="#widget_sidebar" tabIndex=1>Skip to Navigation</a> 
+</div>
+
+	<div id="background_accent1"></div>
+	<div id="background_accent2"></div>
+
+	<!-- HEADER -->
+	<div id="wikia_header" class="color2">
+		<div class="monaco_shrinkwrap">
+			<div id="userData">
+				<span id="userLogin">
+					<a class="wikia-button" id="login" href="/w/index.php?title=Special:UserLogin&amp;returnto=WAD&amp;type=login">Log in</a>
+				</span>
+
+					<a class="wikia-button" id="register" href="/w/index.php?title=Special:UserLogin&amp;returnto=WAD&amp;type=signup">Create account</a>
+
+			</div>
+		</div>
+	</div>
+
+		<div id="background_strip" class="reset">
+			<div class="monaco_shrinkwrap">
+
+			<div id="accent_graphic1"></div>
+			<div id="accent_graphic2"></div>
+			</div>
+		</div>
+		<!-- /HEADER -->
+
+		<!-- PAGE -->
+
+	<div id="monaco_shrinkwrap_main" class="monaco_shrinkwrap with_left_sidebar">
+		<div id="page_wrapper">
+			<div id="wikia_page" class="page">
+		<div id="page_bar" class="reset color1 page_bar clearfix">
+			<ul class="page_tabs primary_tabs" id="page_tabs" role="toolbar">
+				<li id="ca-nstab-main" class="selected"><a href="/wiki/WAD" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="/wiki/Talk:WAD" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+			</ul>
+			<ul class="page_buttons page_controls" id="page_controls" role="toolbar">
+				<li id="ca-edit"><img src="/w/skins/monaco/style/images/blank.gif" class="sprite edit" alt=""/><a href="/w/index.php?title=WAD&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit this page</a></li>
+				<li id="ca-history"><img src="/w/skins/monaco/style/images/blank.gif" class="sprite history" alt=""/><a href="/w/index.php?title=WAD&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+					<!-- ARTICLE -->
+
+				<article id="article" class="mw-body" role="main" aria-labelledby="firstHeading">
+					<a id="top"></a>
+															<div class="mw-indicators">
+</div>
+					<h1 id="firstHeading" class="firstHeading" aria-level="1">WAD</h1>					<div id="bodyContent" class="body_content">
+						<h2 id="siteSub">From DoomWiki.org</h2>
+																								
+						<!-- start content -->
+<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>WAD</b> (which, according to the <a href="/wiki/Doom_Bible" title="Doom Bible">Doom Bible</a>, is an acronym for "Where's All the Data?"<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>) is the file format used by <a href="/wiki/Doom" title="Doom">Doom</a> and all <a href="/wiki/Doom_engine" title="Doom engine">Doom-engine-based</a> games for storing data. A WAD file consists of a header, a directory, and the data <a href="/wiki/Lump" title="Lump">lumps</a> that make up the resources stored within the file. A WAD file can be of two types:
+</p>
+<ul><li> <b><a href="/wiki/IWAD" title="IWAD">IWAD</a></b>: An "Internal WAD" (or "Initial WAD"), or a core WAD that is loaded automatically (or from a game select menu on <a href="/wiki/Source_port" title="Source port">source ports</a>) by the engine and generally provides all the data required to run the game.</li></ul>
+<ul><li> <b><a href="/wiki/PWAD" title="PWAD">PWAD</a></b>: A "Patch WAD", or an optional file that replaces data from the IWAD loaded or provides additional data to the engine.</li></ul>
+<p>A WAD file can be read and/or edited by many tools, such as <a href="/wiki/Editing_utility#WAD_editors" title="Editing utility">WAD editors</a>.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Historical_background"><span class="tocnumber">1</span> <span class="toctext">Historical background</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Header"><span class="tocnumber">2</span> <span class="toctext">Header</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Directory"><span class="tocnumber">3</span> <span class="toctext">Directory</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Compression"><span class="tocnumber">4</span> <span class="toctext">Compression</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Lump_order"><span class="tocnumber">5</span> <span class="toctext">Lump order</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Map_data_lumps"><span class="tocnumber">5.1</span> <span class="toctext">Map data lumps</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Console_port_level_lumps"><span class="tocnumber">5.1.1</span> <span class="toctext">Console port level lumps</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Notes"><span class="tocnumber">5.1.2</span> <span class="toctext">Notes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Flats.2C_Sprites.2C_and_Patches"><span class="tocnumber">5.2</span> <span class="toctext">Flats, Sprites, and Patches</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Console_versions"><span class="tocnumber">5.3</span> <span class="toctext">Console versions</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Miscellaneous"><span class="tocnumber">5.4</span> <span class="toctext">Miscellaneous</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Uses_outside_the_Doom_engine"><span class="tocnumber">6</span> <span class="toctext">Uses outside the Doom engine</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Historical_background">Historical background</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=1" title="Edit section: Historical background">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>After the release of <i><a href="/wiki/Wolfenstein_3D" title="Wolfenstein 3D">Wolfenstein 3D</a></i> in <a href="/wiki/Timeline#1992" title="Timeline">1992</a>, fans developed unauthorized mods of the game that changed elements such as levels and monster graphics. Rather than causing id Software to seek to suppress such mods, these efforts encouraged the developers to make Doom more easily moddable.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup><sup id="cite_ref-masters_3-0" class="reference"><a href="#cite_note-masters-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:134</sup>
+</p><p>The WAD file system is the primary mechanism that allows easy modding by fans. Mods containing new levels, graphics, sound effects and music are natively supported by <a href="/wiki/Vanilla_Doom" title="Vanilla Doom" class="mw-redirect">vanilla Doom</a> without needing any special third party tooling; they can simply be loaded using the <a href="/wiki/Parameter#-file" title="Parameter">-file</a> command line argument. This is in comparison to Wolfenstein mods, where the main game resource files had to be modified in order to make any change.
+</p><p>WAD files contain certain limitations: for example, much of the game behavior cannot be changed without patching <a href="/wiki/DOOM.EXE" title="DOOM.EXE">DOOM.EXE</a> using a tool such as <a href="/wiki/DeHackEd" title="DeHackEd">DeHackEd</a> (modern source ports allow DeHackEd patch files to be included in WAD files). Vanilla Doom does not support replacing sprites from inside PWAD files; older graphical mods would commonly be distributed with a small tool named <a href="/wiki/DeuSF" title="DeuSF" class="mw-redirect">DeuSF</a> that would work around this limitation (modern source ports have entirely removed the restriction).
+</p>
+<h2><span class="mw-headline" id="Header">Header</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=2" title="Edit section: Header">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A WAD file always starts with a 12-byte header. It contains three values:
+</p>
+<table class="wikitable" style="font-size: 95%;">
+
+<tr>
+<th colspan="4"> wadinfo_t
+</th></tr>
+<tr>
+<th>Position </th>
+<th> Length </th>
+<th> Name </th>
+<th> Description
+</th></tr>
+<tr>
+<td>0x00 </td>
+<td> 4 </td>
+<td> identification </td>
+<td> The <a href="https://en.wikipedia.org/wiki/ASCII" class="extiw" title="wikipedia:ASCII">ASCII</a> characters "IWAD" or "PWAD".
+</td></tr>
+<tr>
+<td>0x04 </td>
+<td> 4 </td>
+<td> numlumps
+</td>
+<td>An integer specifying the number of lumps in the WAD.
+</td></tr>
+<tr>
+<td>0x08 </td>
+<td> 4 </td>
+<td> infotableofs </td>
+<td> An integer holding a pointer to the location of the directory.
+</td></tr></table>
+<p>All integers are 4 bytes long in <a href="https://en.wikipedia.org/wiki/x86" class="extiw" title="wikipedia:x86">x86</a>-style <a href="https://en.wikipedia.org/wiki/Endianness" class="extiw" title="wikipedia:Endianness">little-endian</a> order. Their values can never exceed 2<sup>31</sup>-1, since Doom reads them as <a href="https://en.wikipedia.org/wiki/Signedness" class="extiw" title="wikipedia:Signedness">signed</a> ints. For some ports based on the <a href="/wiki/Atari_Jaguar" title="Atari Jaguar">Atari Jaguar</a> code (Playstation derived ports being the notable exception), big-endian order is used instead.
+</p><p>The IWAD or PWAD signature is meant to define whether the file is an <a href="/wiki/IWAD" title="IWAD">IWAD</a> or a <a href="/wiki/PWAD" title="PWAD">PWAD</a>; however, this is not actually checked by the engine. Loading an IWAD as a PWAD is possible, and inversely, loading a PWAD as an IWAD is also possible. For example, <a href="/wiki/CHEX.WAD" title="CHEX.WAD">CHEX.WAD</a> and <a href="/wiki/TNT.WAD" title="TNT.WAD">TNT.WAD</a> have a PWAD signature despite serving as IWADs.
+</p>
+<h2><span class="mw-headline" id="Directory">Directory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=3" title="Edit section: Directory">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The directory associates names of lumps with the data that belong to them. It consists of a number of entries, each with a length of 16 bytes. The length of the directory is determined by the number given in the WAD header. The structure of each entry is as follows:
+</p>
+<table class="wikitable" style="font-size: 95%;">
+<tr>
+<th colspan="4"> filelump_t
+</th></tr>
+<tr>
+<th>Offset </th>
+<th> Length </th>
+<th> Name </th>
+<th> Content
+</th></tr>
+<tr>
+<td>0x00 </td>
+<td> 4 </td>
+<td> filepos </td>
+<td> An integer holding a pointer to the start of the lump's data in the file.
+</td></tr>
+<tr>
+<td>0x04 </td>
+<td> 4 </td>
+<td> size </td>
+<td> An integer representing the size of the lump in bytes.
+</td></tr>
+<tr>
+<td>0x08 </td>
+<td> 8 </td>
+<td> name </td>
+<td> An ASCII string defining the lump's name. The name has a limit of 8 characters, the same as the main portion of an MS-DOS filename. The name must be nul-terminated if less than 8 characters; for maximum tool compatibility, it is best to pad any remainder with nul characters as well.
+</td></tr></table>
+<p>Tools should not assume the lump-order in the WAD to be sorted by their byte offset into the WAD.
+</p><p>"Virtual" lumps (such as <b>F_START</b>) only exist in the directory, having a size of 0. Their offset value therefore is nonsensical (often 0).
+</p><p>It is possible for more than one lump to have the same offset value, as well as having offsets that overlap other lump data.
+</p><p>When a modder imports lumps into a WAD from other files, file extensions are not included. Doom's executable examines only the <i>name</i> field to determine whether all required entries are present at launch. This means, for example, that the encoding of a <a href="/wiki/Music" title="Music">music</a> track may not be immediately obvious if the WAD's intended port supports multiple formats.
+</p><p>Certain characters (such as '\') can cause issues for import and export of lumps from the file system. Tools usually work around these issues by translating to and from different file-system-safe characters.
+</p><p>Typical wad file:
+</p>
+<table class="wikitable" style="font-size: 95%;">
+<tr>
+<th colspan="1"> wadfile_t
+</th></tr>
+<tr>
+<th>Header
+</th></tr>
+<tr>
+<th>Lump Data
+</th></tr>
+<tr>
+<th>Names and pointers of Lumps
+</th></tr></table>
+<h2><span class="mw-headline" id="Compression">Compression</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=4" title="Edit section: Compression">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Atari Jaguar port introduced a form of <a href="https://en.wikipedia.org/wiki/LZSS" class="extiw" title="wikipedia:LZSS">LZSS</a> compression for lumps. If the first character of the name has the 0x80 flag set then it is considered to be compressed. The compressed size of the lump is not stored as the compressed stream has a terminating sequence. It should not be assumed that the compressed data is smaller than the uncompressed size since compression is required for some lumps in the console ports. (Likewise some lumps are required to be uncompressed in order to be read directly from cartridge ROM.)
+</p><p>The stream has a 12-bit sliding window. The format of the compressed stream is a flag byte followed by 8 chunks. The size of a chunk is determined by the flag byte in least significant bit first order. If the bit is not set then it is a uncompressed byte, otherwise it is a 16-bit offset length pair.  The first byte of the pair is the upper 8-bits of the offset.  The upper 4-bits of the second byte is the lower 4-bits of the offset.  The remaining 4 bits are the length to copy.  The offset is from the current output position (or from the end of the sliding window) and may overlap.  Length is incremented by 1 so it becomes some value 1-16.  If length is 1 then it is the end of the stream.
+</p><p>In order to know in advance how much information to read from the compressed lump, console versions of Doom which utilize this compression algorithm take the difference between the offset of the target lump and the next lump in the WAD directory. As a result, all such WAD files are terminated with an empty <span style="font-family: &#39;this-font-does-not-exist&#39;, monospace, sans-serif; font-size: 1em;">ENDOFWAD</span> lump which marks the end of the directory, and has an offset equal to the end of the previous lump. This avoids undefined behavior if the last lump in the directory happens to be compressed.
+</p>
+<h2><span class="mw-headline" id="Lump_order">Lump order</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=5" title="Edit section: Lump order">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The majority of lumps have no restrictions on where they must be located in WAD files, although there are typically some guidelines to make the file easily readable by other people.  For certain lumps, however, the location is crucial.
+</p>
+<h3><span class="mw-headline" id="Map_data_lumps">Map data lumps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=6" title="Edit section: Map data lumps">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A map in Doom is made up of several lumps, each containing specific data required to construct and execute the map. The first lump gives the internal name of the map. In Doom, this had to be in the form ExMy or MAPxx, where x and y could not exceed 4 and 9 respectively (Ultimate Doom), and xx could not exceed 32 (Doom 2/Final Doom). Other than defining the name of the map, the lump is usually empty but can contain data. The DOOM64.WAD file for <a href="/wiki/Doom_64_EX" title="Doom 64 EX" class="mw-redirect">Doom 64 EX</a>, converted out of the Nintendo 64 ROM content, contains embedded IWADs in MAPxx lumps. In <a href="/wiki/Hexen" title="Hexen">Hexen</a>, they contain version control information; which is not used by the game but was presumably used by <a href="/wiki/Raven_Software" title="Raven Software">Raven Software</a>'s editing tools. <a href="/wiki/SMMU" title="SMMU">SMMU</a> introduced using it to store map information and <a href="/wiki/FraggleScript" title="FraggleScript">FraggleScript</a>. The level name marks the start of this map. In order to work properly, the following lumps must follow immediately, in that order, after the level name:
+</p>
+<ul><li><a href="/wiki/Thing" title="Thing">THINGS</a>: A lump listing all the Things present in this map: their X and Y coordinates, starting angles, type and flags. In the <a href="/wiki/Hexen" title="Hexen">Hexen</a> map format, this lump also contains information on Z-height and a thing's TID, special, and arguments. As with all of these lumps, this list will be generated by your level editor and should generally be left alone.</li></ul>
+<ul><li><a href="/wiki/Linedef" title="Linedef">LINEDEFS</a>: A list of linedefs, defined by their starting and ending vertices, flags, type, tag, args, and front and back sidedefs (if any). Note: The standard Doom format does not contain args.</li></ul>
+<ul><li><a href="/wiki/Sidedef" title="Sidedef">SIDEDEFS</a>: A list of the sidedefs that are linked to the linedefs. These contain the data for what textures appear where on the side of each line, their X and Y offsets, and what sector this side of the linedef belongs to.</li></ul>
+<ul><li><a href="/wiki/Vertex" title="Vertex">VERTEXES</a>: A list of each vertex in the map, using X and Y coordinates.</li></ul>
+<ul><li><a href="/wiki/Seg" title="Seg">SEGS</a>: A list of line segments called "segs" that connect to form subsectors. Created by a <a href="/wiki/Node_builder" title="Node builder">node builder</a>.</li></ul>
+<ul><li><a href="/wiki/Subsector" title="Subsector">SSECTORS</a>: A list of subsectors, created by a node builder.</li></ul>
+<ul><li><a href="/wiki/Node" title="Node">NODES</a>: The node tree which Doom uses to speed up the rendering process. Similar to a vismap in modern 3D games (such as Quake 3). Created by a node builder.</li></ul>
+<ul><li><a href="/wiki/Sector" title="Sector">SECTORS</a>: Defines the floor and ceiling heights and textures, as well as light value, tag, and type of each sector in your map.</li></ul>
+<ul><li><a href="/wiki/Reject" title="Reject">REJECT</a>: Optionally compiled by the node builder, this lump contains data about which sectors are visible from which other sectors. Originally, Doom used this to optimize the game speed by skipping AI routines for enemies whose target was in a rejected sector. Some modern <a href="/wiki/Source_port" title="Source port">source ports</a> do not require this lump any more; <a href="/wiki/ZDoom" title="ZDoom">ZDoom</a> for example has been designed to work even without this lump present. For compatibility purposes, an empty (0-filled) REJECT lump should be included if nothing else. The REJECT lump can also be used to create certain special effects (sectors into which enemies cannot see, for example) if modified carefully.</li></ul>
+<ul><li><a href="/wiki/Blockmap" title="Blockmap">BLOCKMAP</a>: Collision-detection information which determines whether objects in a map are touching.</li></ul>
+<ul><li><a href="/wiki/Behavior" title="Behavior">BEHAVIOR</a>: Not originally a part of Doom, the BEHAVIOR lump was first used in Hexen and contains the compiled scripts that this map will use. Vanilla Doom and other ports designed for Doom only will crash when this lump is present because Hexen format levels are not compatible with Doom format levels. In <a href="/wiki/Crispy_Doom" title="Crispy Doom">Crispy Doom</a> 2.3+ it is possible to load and explore maps in Hexen format, but all interactions with the environment are most probably broken. This lump must be present for Hexen format levels since it is the only way to tell if a map is in Hexen or Doom format.</li></ul>
+<h4><span class="mw-headline" id="Console_port_level_lumps">Console port level lumps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=7" title="Edit section: Console port level lumps">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Some of the console ports of Doom add additional lumps to levels in order to facilitate their extensions to the game engine:
+</p>
+<ul><li> <a href="/wiki/LEAFS" title="LEAFS" class="mw-redirect">LEAFS</a>: Present in PlayStation versions of Doom as well as in Doom 64. Indexes non-rendered extra segs added to subsectors by the node builder to track edges of subsectors which do not correspond to linedefs. Enables rendering floors and ceilings as polygons.</li>
+<li> <a href="/wiki/MACROS" title="MACROS" class="mw-redirect">MACROS</a>: Present only in Doom 64. Stores compiled script bytecode for each map. Scripts may run at map start or be referenced individually by linedefs with a macro action flag.</li></ul>
+<h4><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=8" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The Doom <a href="/wiki/Alpha" title="Alpha" class="mw-redirect">alphas</a> had noticeably different map formats.
+</p>
+<ul><li> In alpha 0.2, there is only one map, which is defined by a series of lumps named M_AREAS, M_FNAMES, M_LINES, M_PLANES, M_PNAMES, M_POINTS, M_TEXTUR and M_THINGS.</li>
+<li> From alpha 0.4 to the beta, maps had to be within M_START and M_END markers.</li>
+<li> In alpha 0.4 and 0.5, a map's lumps are as such: map header, FLATNAME, POINTS, LINES, SECTORS, THINGS.</li>
+<li> With the press-release beta, the map lumps had nearly acquired their definitive names and formats, but the REJECT lump was not introduced yet.</li></ul>
+<h3><span class="mw-headline" id="Flats.2C_Sprites.2C_and_Patches"><a href="/wiki/Flat" title="Flat">Flats</a>, <a href="/wiki/Sprite" title="Sprite">Sprites</a>, and <a href="/wiki/Patch" title="Patch">Patches</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=9" title="Edit section: Flats, Sprites, and Patches">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>These three resources must be located between special marker lumps so that Doom knows what it is looking at.  Other than defining the beginning and end of a graphics section, these lumps contain no data and are 0 bytes long. 
+</p><p>The markers consist of names X_START and X_END, where X is the first 1 or 2 letters of the appropriate resource.  For example, sprites should be located between S_START and S_END markers. SS_START and SS_END are usually used for user WAD files.
+</p><p>These markers are required by DOOM:
+</p>
+<table class="wikitable" style="font-size: 95%;">
+<tr>
+<th> Start marker </th>
+<th> End marker </th>
+<th> What </th>
+<th> Used by
+</th></tr>
+<tr>
+<td> F_START </td>
+<td> F_END </td>
+<td> <a href="/wiki/Flat" title="Flat">Flat</a> delimiters </td>
+<td> All versions
+</td></tr>
+<tr>
+<td> S_START </td>
+<td> S_END </td>
+<td> <a href="/wiki/Sprite" title="Sprite">Sprite</a> delimiters </td>
+<td> All versions
+</td></tr></table>
+<p>These markers are found in the official WAD files, but are unused by known DOOM engines:
+</p>
+<table class="wikitable" style="font-size: 95%;">
+<tr>
+<th> Start marker </th>
+<th> End marker </th>
+<th> Found in </th>
+<th> What </th>
+<th> Used by
+</th></tr>
+<tr>
+<td> P_START </td>
+<td> P_END </td>
+<td> </td>
+<td> <a href="/wiki/Patch" title="Patch">Patch</a> delimiters </td>
+<td> All versions
+</td></tr>
+<tr>
+<td> P1_START </td>
+<td> P1_END </td>
+<td> inside P_ range </td>
+<td> Shareware, <a href="/wiki/Heretic" title="Heretic">Heretic</a> or <a href="/wiki/Hexen" title="Hexen">Hexen</a> patches </td>
+<td> Doom Shareware and up (but not Final Doom), Heretic, Hexen
+</td></tr>
+<tr>
+<td> P2_START </td>
+<td> P2_END </td>
+<td> inside P_ range </td>
+<td> Registered, Heretic or Hexen patches </td>
+<td> Doom Registered and up (but not Final Doom), Heretic, Hexen
+</td></tr>
+<tr>
+<td> P3_START </td>
+<td> P3_END </td>
+<td> inside P_ range </td>
+<td> Doom2 patches </td>
+<td> Doom2, but not Final Doom
+</td></tr>
+<tr>
+<td> F1_START </td>
+<td> F1_END </td>
+<td> inside F_ range </td>
+<td> Shareware, Heretic or Hexen flats </td>
+<td> Doom Shareware and up (but not Final Doom), Heretic, Hexen
+</td></tr>
+<tr>
+<td> F2_START </td>
+<td> F2_END </td>
+<td> inside F_ range </td>
+<td> Registered, Heretic or Hexen flats </td>
+<td> Doom Registered and up (but not Final Doom), Heretic, Hexen
+</td></tr></table>
+<p>Patches are not required to have any markers. Some <a href="/wiki/Lump" title="Lump">lump</a> management utilities require P_START and P_END.
+</p>
+<h3><span class="mw-headline" id="Console_versions">Console versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=10" title="Edit section: Console versions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Console versions based on the Atari Jaguar code base use an additional marker-defined namespace for storing textures:
+</p>
+<table class="wikitable" style="font-size: 95%;">
+<tr>
+<th> Start marker </th>
+<th> End marker </th>
+<th> What </th>
+<th> Used by
+</th></tr>
+<tr>
+<td> T_START </td>
+<td> T_END </td>
+<td> Textures </td>
+<td> Jaguar, <a href="/wiki/Sega_32X" title="Sega 32X">32X</a>, <a href="/wiki/3DO" title="3DO">3DO</a>, <a href="/wiki/Doom_for_Game_Boy_Advance" title="Doom for Game Boy Advance">GBA</a>, PSX, Doom 64
+</td></tr></table>
+<p>Each texture in these versions of Doom consists of a single patch between these markers (in differing formats per platform), and the TEXTUREx lumps used by the PC version do not exist.
+</p>
+<h3><span class="mw-headline" id="Miscellaneous">Miscellaneous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=11" title="Edit section: Miscellaneous">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some lumps are known by their names and apply to the game as a whole. Some of these are:
+</p>
+<ul><li> Sound effects.</li>
+<li> Music.</li>
+<li> <a href="/wiki/PLAYPAL" title="PLAYPAL">PLAYPAL</a>: Color palettes for various situations.</li>
+<li> <a href="/wiki/COLORMAP" title="COLORMAP">COLORMAP</a>: Map to adjust pixel values for reduced brightness.</li>
+<li> <a href="/wiki/ENDOOM" title="ENDOOM">ENDOOM</a>: Text displayed when <a href="/wiki/Vanilla_Doom" title="Vanilla Doom" class="mw-redirect">vanilla Doom</a> exits.</li>
+<li> <a href="/wiki/TEXTURE1" title="TEXTURE1" class="mw-redirect">TEXTURE1</a>, <a href="/wiki/TEXTURE2" title="TEXTURE2" class="mw-redirect">TEXTURE2</a>, <a href="/wiki/PNAMES" title="PNAMES">PNAMES</a>: Data defining the <a href="/wiki/Wall_texture" title="Wall texture" class="mw-redirect">wall textures</a>.</li>
+<li> <a href="/wiki/Demo" title="Demo">DEMOs</a>: Recorded games, auto-played before any level is started.</li></ul>
+<h2><span class="mw-headline" id="Uses_outside_the_Doom_engine">Uses outside the Doom engine</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=12" title="Edit section: Uses outside the Doom engine">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Due to Doom's popularity and the simplicity of the format, many third party tools were written to manipulate WAD files very early on. This encouraged other game developers to adopt it even for unrelated games. Some even made use of the map format, though the values associated to thing, line, and sector types are usually completely different.
+</p>
+<ul><li> <i>A.D. Cop</i> and <i>A.D. Cop: Overseas Missions</i> (IWAD/PWAD signature replaced with PACK, additional lumps added to map format)</li>
+<li> <i><a href="https://en.wikipedia.org/wiki/Betrayal_in_Antara" class="extiw" title="wikipedia:Betrayal in Antara">Betrayal in Antara</a></i> some of the ETC resource files are actually PWADs</li>
+<li> <i><a href="/wiki/Amulets_%26_Armor" title="Amulets &amp; Armor">Amulets &amp; Armor</a></i> (only stores maps in WAD files, resources are in other containers)</li>
+<li> <i><a href="https://en.wikipedia.org/wiki/Birthright:_The_Gorgon%27s_Alliance" class="extiw" title="wikipedia:Birthright: The Gorgon's Alliance">Birthright: The Gorgon's Alliance</a></i> (only stores maps in WAD files, resources are in other containers)</li>
+<li> <i><a href="/wiki/Doom_2D" title="Doom 2D">Doom 2D</a></i> (stores resources in WAD, but with different image and sound formats. It also supports <a href="/wiki/LMP" title="LMP">LMP</a> and <a href="/wiki/PLAYPAL" title="PLAYPAL">PLAYPAL</a> lumps)</li>
+<li> <i>Mars 3D</i> (uses MAD files to store graphics and maps, function identically to WAD)</li>
+<li> <i><a href="/wiki/Rise_of_the_Triad" title="Rise of the Triad">Rise of the Triad</a></i> (stores resources in WAD, but with different image and sound formats)</li>
+<li> <i>Tank Wars</i> (uses WAD as container)</li></ul>
+<p>The .wad extension has also been used for different formats. <i><a href="/wiki/Quake" title="Quake">Quake</a></i> uses the "wad2" format to store various graphic resources, this is an evolution of the Doom wad format with a modified directory entry structure. <i>Half-Life'</i>s GoldSrc engine uses the "wad3" format, derived from and compatible with Quake's wad2 format, to store textures. Also of note is that the Nintendo Wii uses a format also called <a rel="nofollow" class="external text" href="https://wiibrew.org/wiki/WAD_files">WAD</a> for many files such as WiiWare games and system files, but this is coincidental; it is an entirely unrelated file format.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li> <a href="/wiki/PK3" title="PK3">PK3</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=WAD&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a href="/wiki/Tom_Hall" title="Tom Hall">Hall, Tom</a>&#160;(28 November 1992). <a class="external text" href="https://5years.doomworld.com/doombible/doombible.pdf">"Doom Bible."</a> <i>Doomworld.</i> Retrieved 8 October 2017.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a href="/wiki/John_Romero" title="John Romero">Romero, John</a>&#160;(8 October 2017). <a rel="nofollow" class="external text" href="https://twitter.com/romero/status/917170751685517312">"<i>Castle Smurfenstein in 1983 was a mod of the original CW. Ppl modded 1992 Wolf3D and caused us to make DOOM open &amp; moddable. Interesting</i>."</a> <i>Twitter.</i> Retrieved 8 October 2017.</span>
+</li>
+<li id="cite_note-masters-3"><span class="mw-cite-backlink"><a href="#cite_ref-masters_3-0">↑</a></span> <span class="reference-text"><a href="/wiki/David_Kushner" title="David Kushner">Kushner, David</a>. <i><a href="/wiki/Masters_of_Doom" title="Masters of Doom">Masters of Doom: How Two Guys Created an Empire and Transformed Pop Culture</a></i>. New York: Random House, 2003.</span>
+</li>
+</ol>
+
+<!-- 
+NewPP limit report
+Cached time: 20231025222202
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.072 seconds
+Real time usage: 0.079 seconds
+Preprocessor visited node count: 280/1000000
+Preprocessor generated node count: 1114/1000000
+Post‐expand include size: 1704/2097152 bytes
+Template argument size: 1113/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   31.240      1 - -total
+ 51.01%   15.934      2 - Template:Cite_web
+ 10.48%    3.274      1 - Template:Rp
+ 10.44%    3.261      2 - Template:Condfullstop
+  6.99%    2.184      2 - Template:Wp
+  6.94%    2.169      1 - Template:Timeline
+  6.11%    1.909      6 - Template:Prettytable
+  4.91%    1.534      1 - Template:C
+-->
+
+<!-- Saved in parser cache with key doomwikidb:stable-pcache:idhash:535-0!*!0!!en!*!* and timestamp 20231025222202 and revision id 420066
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://doomwiki.org/w/index.php?title=WAD&amp;oldid=420066">https://doomwiki.org/w/index.php?title=WAD&amp;oldid=420066</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Resources" title="Category:Resources">Resources</a></li><li><a href="/wiki/Category:Doom_engine" title="Category:Doom engine">Doom engine</a></li></ul></div></div>						<!-- end content -->
+												<div class="visualClear"></div>
+					</div>
+
+				</article>
+				<!-- /ARTICLE -->
+				
+			<!-- ARTICLE FOOTER -->
+			<div id="articleFooter" class="reset article_footer">
+				<table style="border-spacing: 0;">
+					<tr>
+						<td class="col1">
+							<ul class="actions" id="articleFooterActions">
+								<li><a id="fe_edit_icon" href="/w/index.php?title=WAD&amp;action=edit"><img src="/w/skins/monaco/style/images/blank.gif" id="fe_edit_img" class="sprite edit" alt=""/></a> <div>Improve DoomWiki.org by <a id="fe_edit_link" href="/w/index.php?title=WAD&amp;action=edit">editing this page</a></div></li>
+								<li><img src="/w/skins/monaco/style/images/blank.gif" id="fe_user_img" alt="" class="sprite user"/> <div><a href="/w/index.php?title=User:Nngnna&amp;action=edit&amp;redlink=1" class="new" title="User:Nngnna (page does not exist)" id="fe_user_link">Nngnna</a> made an edit on <time datetime="2023-10-25T22:22:02Z">21 October 2023</time></div></li>
+								<!-- haleyjd 20140425: generic copyright text support -->
+								<li><img src="/w/skins/monaco/style/images/blank.gif" id="fe_copyright_img" class="sprite copyright" alt=""/> <div id="copyright">Content is available under <a href="/wiki/Doom_Wiki:Copyrights" title="Doom Wiki:Copyrights">CC BY-SA 4.0 International</a> unless otherwise noted. (<a href="//doomwiki.org/wiki/Doom_Wiki:Terms_of_use">Terms of Use</a>)</div></li>
+							</ul>
+						</td>
+						<td class="col2">
+							<ul id="articleFooterActions3" class="actions clearfix"> 
+								<li id="fe_history"><a id="fe_history_icon" href="/w/index.php?title=WAD&amp;action=history"><img src="/w/skins/monaco/style/images/blank.gif" id="fe_history_img" class="sprite history" alt=""/></a> <div><a id="fe_history_link" href="/w/index.php?title=WAD&amp;action=history">History</a></div></li>
+								<li id="fe_recent"><a id="fe_recent_icon" href="/wiki/Special:RecentChangesLinked/WAD"><img src="/w/skins/monaco/style/images/blank.gif" id="fe_recent_img" class="sprite recent" alt=""/></a> <div><a id="fe_recent_link" href="/wiki/Special:RecentChangesLinked/WAD">Related changes</a> </div></li>
+							</ul>
+							<ul id="articleFooterActions4" class="actions clearfix">
+								<li id="fe_permalink"><a id="fe_permalink_icon" href="/w/index.php?title=WAD&amp;oldid=420066"><img src="/w/skins/monaco/style/images/blank.gif" id="fe_permalink_img" class="sprite move" alt=""/></a> <div><a id="fe_permalink_link" href="/w/index.php?title=WAD&amp;oldid=420066">Permanent link</a></div></li>
+								<li id="fe_whatlinkshere"><a id="fe_whatlinkshere_icon" rel="nofollow" href="/wiki/Special:WhatLinksHere/WAD"><img src="/w/skins/monaco/style/images/blank.gif" id="fe_whatlinkshere_img" class="sprite pagelink" alt=""/></a> <div><a id="fe_whatlinkshere_link" rel="nofollow" href="/wiki/Special:WhatLinksHere/WAD">What links here</a></div></li>
+							</ul>
+							<ul class="actions clearfix" id="articleFooterActions2">
+								<li id="fe_randompage"><a id="fe_random_icon" href="/wiki/Special:Random"><img src="/w/skins/monaco/style/images/blank.gif" id="fe_random_img" class="sprite random" alt=""/></a> <div><a id="fe_random_link" href="/wiki/Special:Random">View random page</a></div></li>
+								<li id="fe_mobile"><img src="/w/skins/monaco/style/images/blank.gif" id="fe_mobile_img" class="sprite mobile" alt=""/> <div><a href="https://doomwiki.org/w/index.php?title=WAD&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle" rel="nofollow">Mobile view</a></div></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+				<!-- /ARTICLE FOOTER -->
+
+			</div>
+			<!-- /PAGE -->
+
+			<noscript><link rel="stylesheet" property="stylesheet" type="text/css" href="/w/skins/monaco/style/css/noscript.css?303" /></noscript>
+		</div>
+		<!-- WIDGETS -->
+		<div id="widget_sidebar" class="reset widget_sidebar left_sidebar sidebar">
+			<div id="wiki_logo" style="background-image: url(/w/skins/Wiki.png);"><a href="/wiki/Entryway" accesskey="z" rel="home">DoomWiki.org</a></div>
+
+			<!-- SEARCH/NAVIGATION -->
+			<div class="widget sidebox navigation_box" id="navigation_widget" role="navigation">
+			<div id="search_box" class="color1" role="search">
+				<form action="/wiki/Special:Search" id="searchform">
+					<label style="display: none;" for="searchInput">Search DoomWiki.org</label>
+					<input id="searchInput" maxlength="200" aria-label="Search DoomWiki.org" placeholder="Search DoomWiki.org" tabindex="2" aria-required="true" aria-flowto="search-button" title="Search DoomWiki.org [f]" accesskey="f" type="search" name="search"/>										<input type="hidden" name="go" value="1" />
+					<input type="image" alt="Search" src="/w/skins/monaco/style/images/blank.gif" id="search-button" class="sprite search" tabIndex=2 />
+				</form>
+			</div>
+<nav id="navigation" class="hover-navigation"><ul><li id="menu-item_1" class="menu-item"><a id="a-menu-item_1" href="/wiki/Entryway" tabIndex=3>Entryway</a></li><li id="menu-item_2" class="menu-item"><a id="a-menu-item_2" href="/wiki/News_board" tabIndex=3>News board</a></li><li id="menu-item_3" class="menu-item with-sub-menu"><a id="a-menu-item_3" href="/wiki/Commercial_games" tabIndex=3>Games<em>&rsaquo;</em></a><ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Doom" tabindex="3">Doom</a>
+</li><li class="menu-item"><a href="/wiki/Doom_II" tabindex="3">Doom II</a>
+</li><li class="menu-item"><a href="/wiki/Final_Doom" tabindex="3">Final Doom</a>
+</li><li class="menu-item"><a href="/wiki/Doom_3" tabindex="3">Doom 3</a>
+</li><li class="menu-item"><a href="/wiki/Doom_(2016)" tabindex="3">Doom (2016)</a>
+</li><li class="menu-item"><a href="/wiki/Doom_Eternal" tabindex="3">Doom Eternal</a>
+</li><li class="menu-item"><a href="/wiki/Category:Expansions" tabindex="3">Add-ons &amp; expansions<em>&rsaquo;</em></a>
+<ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/The_Ultimate_Doom" tabindex="3">The Ultimate Doom</a>
+</li><li class="menu-item"><a href="/wiki/Master_Levels_for_Doom_II" tabindex="3">Master Levels for Doom II</a>
+</li><li class="menu-item"><a href="/wiki/No_Rest_for_the_Living" tabindex="3">No Rest for the Living</a>
+</li><li class="menu-item"><a href="/wiki/The_Lost_Levels" tabindex="3">Doom 64: The Lost Levels</a>
+</li><li class="menu-item"><a href="/wiki/Doom_3:_Resurrection_of_Evil" tabindex="3">Doom 3: Resurrection of Evil</a>
+</li><li class="menu-item"><a href="/wiki/The_Lost_Mission" tabindex="3">Doom 3: The Lost Mission</a>
+</li><li class="menu-item"><a href="/wiki/Unto_the_Evil" tabindex="3">Doom (2016): Unto the Evil</a>
+</li><li class="menu-item"><a href="/wiki/Hell_Followed" tabindex="3">Doom (2016): Hell Followed</a>
+</li><li class="menu-item"><a href="/wiki/Bloodfall" tabindex="3">Doom (2016): Bloodfall</a>
+</li><li class="menu-item"><a href="/wiki/The_Ancient_Gods,_Part_One" tabindex="3">The Ancient Gods, Part One</a>
+</li><li class="menu-item"><a href="/wiki/The_Ancient_Gods,_Part_Two" tabindex="3">The Ancient Gods, Part Two</a>
+</li></ul></li><li class="menu-item"><a href="/wiki/Category:Games" tabindex="3">Other Doom games<em>&rsaquo;</em></a>
+<ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Doom_64" tabindex="3">Doom 64</a>
+</li><li class="menu-item"><a href="/wiki/Doom_RPG" tabindex="3">Doom RPG</a>
+</li><li class="menu-item"><a href="/wiki/Doom_II_RPG" tabindex="3">Doom II RPG</a>
+</li><li class="menu-item"><a href="/wiki/Doom_Resurrection_(iPhone)" tabindex="3">Doom Resurrection</a>
+</li><li class="menu-item"><a href="/wiki/Doom:_The_Boardgame" tabindex="3">Doom: The Boardgame (2004)</a>
+</li><li class="menu-item"><a href="/wiki/Doom:_The_Board_Game" tabindex="3">Doom: The Board Game (2016)</a>
+</li><li class="menu-item"><a href="/wiki/Doom_VFR" tabindex="3">Doom VFR</a>
+</li></ul></li><li class="menu-item"><a href="/wiki/Category:Games" tabindex="3">Other Doom engine games<em>&rsaquo;</em></a>
+<ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Heretic" tabindex="3">Heretic</a>
+</li><li class="menu-item"><a href="/wiki/Hexen" tabindex="3">Hexen</a>
+</li><li class="menu-item"><a href="/wiki/Strife" tabindex="3">Strife</a>
+</li><li class="menu-item"><a href="/wiki/Chex_Quest" tabindex="3">Chex Quest</a>
+</li><li class="menu-item"><a href="/wiki/Chex_Quest_2" tabindex="3">Chex Quest 2</a>
+</li><li class="menu-item"><a href="/wiki/Chex_Quest_3" tabindex="3">Chex Quest 3</a>
+</li><li class="menu-item"><a href="/wiki/Hacx" tabindex="3">Hacx</a>
+</li></ul></li><li class="menu-item"><a href="/wiki/Commercial_games" tabindex="3">All games</a>
+</li></ul></li><li id="menu-item_39" class="menu-item with-sub-menu"><a id="a-menu-item_39" href="/wiki/Category:Gameplay" tabIndex=3>Gameplay<em>&rsaquo;</em></a><ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Levels" tabindex="3">Levels</a>
+</li><li class="menu-item"><a href="/wiki/Weapons" tabindex="3">Weapons</a>
+</li><li class="menu-item"><a href="/wiki/Item" tabindex="3">Items</a>
+</li><li class="menu-item"><a href="/wiki/Automap" tabindex="3">Automap</a>
+</li><li class="menu-item"><a href="/wiki/Controls" tabindex="3">Player controls</a>
+</li><li class="menu-item"><a href="/wiki/Doom%27s_protagonist" tabindex="3">Player character</a>
+</li><li class="menu-item"><a href="/wiki/Monster" tabindex="3">Monsters</a>
+</li><li class="menu-item"><a href="/wiki/Category:Hazards" tabindex="3">Other hazards</a>
+</li><li class="menu-item"><a href="/wiki/Skill_level" tabindex="3">Skill levels</a>
+</li><li class="menu-item"><a href="/wiki/Multiplayer" tabindex="3">Multiplayer</a>
+</li><li class="menu-item"><a href="/wiki/Cheat" tabindex="3">Cheats</a>
+</li><li class="menu-item"><a href="/wiki/Easter_egg" tabindex="3">Easter eggs</a>
+</li></ul></li><li id="menu-item_52" class="menu-item with-sub-menu"><a id="a-menu-item_52" href="/wiki/Category:Community" tabIndex=3>Doom community<em>&rsaquo;</em></a><ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Category:Modifications" tabindex="3">WADs &amp; mods</a>
+</li><li class="menu-item"><a href="/wiki/Editing_tutorials" tabindex="3">Editing tutorials</a>
+</li><li class="menu-item"><a href="/wiki/Category:Source_ports" tabindex="3">Source ports<em>&rsaquo;</em></a>
+<ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Chocolate_Doom" tabindex="3">Chocolate Doom</a>
+</li><li class="menu-item"><a href="/wiki/Doom_Legacy" tabindex="3">Doom Legacy</a>
+</li><li class="menu-item"><a href="/wiki/Doomsday" tabindex="3">Doomsday</a>
+</li><li class="menu-item"><a href="/wiki/EDGE" tabindex="3">EDGE</a>
+</li><li class="menu-item"><a href="/wiki/Eternity_Engine" tabindex="3">Eternity Engine</a>
+</li><li class="menu-item"><a href="/wiki/GZDoom" tabindex="3">GZDoom</a>
+</li><li class="menu-item"><a href="/wiki/Odamex" tabindex="3">Odamex</a>
+</li><li class="menu-item"><a href="/wiki/PrBoom%2B" tabindex="3">PrBoom+</a>
+</li><li class="menu-item"><a href="/wiki/ReMooD" tabindex="3">ReMooD</a>
+</li><li class="menu-item"><a href="/wiki/Risen3D" tabindex="3">Risen3D</a>
+</li><li class="menu-item"><a href="/wiki/Zandronum" tabindex="3">Zandronum</a>
+</li><li class="menu-item"><a href="/wiki/ZDaemon" tabindex="3">ZDaemon</a>
+</li><li class="menu-item"><a href="/wiki/ZDoom" tabindex="3">ZDoom</a>
+</li></ul></li><li class="menu-item"><a href="/wiki/Fan-made_Doom_games" tabindex="3">Fan-made Doom games</a>
+</li><li class="menu-item"><a href="/wiki/Category:People" tabindex="3">People</a>
+</li><li class="menu-item"><a href="/wiki/Quotes" tabindex="3">Quotes</a>
+</li><li class="menu-item"><a href="/wiki/Websites" tabindex="3">Websites<em>&rsaquo;</em></a>
+<ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Doomworld" tabindex="3">Doomworld</a>
+</li><li class="menu-item"><a href="/wiki/Idgames_archive" tabindex="3">idgames archive</a>
+</li><li class="menu-item"><a href="/wiki/ClassicDOOM.com" tabindex="3">ClassicDOOM.com</a>
+</li><li class="menu-item"><a href="/wiki/Doomed_Speed_Demos_Archive" tabindex="3">Doomed Speed Demos Archive</a>
+</li><li class="menu-item"><a href="/wiki/Compet-n" tabindex="3">Compet-n</a>
+</li><li class="menu-item"><a href="/wiki/Websites" tabindex="3">Other websites</a>
+</li></ul></li><li class="menu-item"><a href="/wiki/IRC" tabindex="3">IRC</a>
+</li><li class="menu-item"><a href="/wiki/Speedrunning" tabindex="3">Speedrunning</a>
+</li><li class="menu-item"><a href="/wiki/Speedmapping" tabindex="3">Speedmapping</a>
+</li></ul></li><li id="menu-item_82" class="menu-item with-sub-menu"><a id="a-menu-item_82" href="/wiki/Category:Technical_aspects" tabIndex=3>Technical aspects<em>&rsaquo;</em></a><ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Doom_engine" tabindex="3">Doom engine</a>
+</li><li class="menu-item"><a href="/wiki/Rendering_engine" tabindex="3">Rendering engine</a>
+</li><li class="menu-item"><a href="/wiki/Doom_networking_component" tabindex="3">Engine networking component</a>
+</li><li class="menu-item"><a href="/wiki/Engine_bug" tabindex="3">Bugs &amp; limitations</a>
+</li><li class="menu-item"><a href="/wiki/Doom_source_code" tabindex="3">Source code</a>
+</li><li class="menu-item"><a href="/wiki/Versions_of_Doom_and_Doom_II" tabindex="3">Release versions</a>
+</li><li class="menu-item"><a href="/wiki/File_formats" tabindex="3">File formats</a>
+</li><li class="menu-item"><a href="/wiki/WAD" tabindex="3">WAD format</a>
+</li><li class="menu-item"><a href="/wiki/Lump" tabindex="3">Lumps</a>
+</li><li class="menu-item"><a href="/wiki/Parameter" tabindex="3">Command line arguments</a>
+</li><li class="menu-item"><a href="/wiki/Demo" tabindex="3">Demos</a>
+</li></ul></li><li id="menu-item_94" class="menu-item with-sub-menu"><a id="a-menu-item_94" href="/wiki/Category:Historical" tabIndex=3>History &amp; media<em>&rsaquo;</em></a><ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Id_Software" tabindex="3">id Software</a>
+</li><li class="menu-item"><a href="/wiki/Raven_Software" tabindex="3">Raven Software</a>
+</li><li class="menu-item"><a href="/wiki/Timeline" tabindex="3">Timeline</a>
+</li><li class="menu-item"><a href="/wiki/Cover_art" tabindex="3">Cover art</a>
+</li><li class="menu-item"><a href="/wiki/Music" tabindex="3">Music</a>
+</li><li class="menu-item"><a href="/wiki/Category:Expanded_universe" tabindex="3">Official merchandise</a>
+</li></ul></li><li id="menu-item_101" class="menu-item with-sub-menu"><a id="a-menu-item_101" href="/wiki/Category:Doom_Wiki" tabIndex=3>Wiki community<em>&rsaquo;</em></a><ul class="sub-menu widget"><li class="menu-item"><a href="/wiki/Doom_Wiki:FAQ" tabindex="3">FAQ</a>
+</li><li class="menu-item"><a href="/wiki/Doom_Wiki:Policies_and_guidelines" tabindex="3">Policies and guidelines</a>
+</li><li class="menu-item"><a href="/wiki/Doom_Wiki:Central_Processing" tabindex="3">Discussion portal</a>
+</li><li class="menu-item"><a href="/wiki/Doom_Wiki:Administrators" tabindex="3">Administrators</a>
+</li><li class="menu-item"><a href="/wiki/Doom_Wiki:WikiNode" tabindex="3">WikiNode</a>
+</li></ul></li></ul></nav><table style="border-spacing: 0;" id="link_box_table">		<tbody id="link_box_dynamic">
+			<tr>
+				<td colspan="2">
+					<ul>
+						<li id="dynamic-links-add-image-row" class="link_box_dynamic_item"><a id="dynamic-links-add-image-icon" href="/w/index.php?title=Special:UserLogin&amp;returnto=Special%3AUpload" tabindex="-1"><img src="/w/skins/monaco/style/images/blank.gif" id="dynamic-links-add-image-img" class="sprite photo" alt=""/></a> <a id="dynamic-links-add-image-link" href="/w/index.php?title=Special:UserLogin&amp;returnto=Special%3AUpload" tabindex="3">Upload a new image</a></li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+		<tbody id="link_box" class="color2 linkbox_static">
+			<tr>
+				<td>
+					<ul>
+						<li><a rel="nofollow" href="/wiki/Special:RecentChanges" tabIndex=3>Recent changes</a></li>
+						<li><a rel="nofollow" href="/wiki/Special:SpecialPages" tabIndex=3>Special pages</a></li>
+						<li><a rel="nofollow" href="/wiki/Doom_Wiki:About" tabIndex=3>About</a></li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li><a rel="nofollow" href="/wiki/Special:Random" tabIndex=3>Random page</a></li>
+						<li><a rel="nofollow" href="/wiki/Help:Contents" tabIndex=3>Help</a></li>
+						<li><a rel="nofollow" href="/wiki/Doom_Wiki:General_disclaimer" tabIndex=3>Disclaimers</a></li>
+						<li style="font-size: 1px; position: absolute; top: -10000px"><a href="/wiki/Special:Recentchanges" accesskey="r">Recent changes</a><a href="/wiki/Special:Random" accesskey="x">Random page</a></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center;">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" title="PayPal">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="D5MLUSDXA8HMQ">
+						<input type="image" src="/w/skins/monaco/style/images/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!" style="border: 0; width:139px; margin:0;">
+						<img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" style="border: 0;">
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center;">
+					<a href="https://www.patreon.com/doomwiki" target="_blank" rel="nofollow"><img alt="Patreon" src="/w/skins/monaco/style/images/patreon.png" width="139" height="37"></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+			</div>
+			<!-- /SEARCH/NAVIGATION -->
+
+		</div>
+		<!-- /WIDGETS -->
+	<!--/div-->
+
+</div><script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.state({"user":"ready","user.groups":"ready"});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","skins.monaco.ContentRightSidebar","ext.gadget.Lightbox","ext.gadget.ReferenceTooltips","ext.gadget.UploadToolbar","ext.gadget.MonacoRecentChanges","ext.flaggedRevs.advanced"]);});</script>
+<!--[if IE]><script type="text/javascript">'abbr article aside audio canvas details figcaption figure footer header hgroup mark menu meter nav output progress section summary time video'.replace(/\w+/g,function(n){document.createElement(n)})</script><![endif]--><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54071154-1', 'auto');
+  ga('send', 'pageview', { 'anonymizeIp': true });
+
+</script>
+		<div id="positioned_elements" class="reset"></div>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":147});});</script>
+	</body>
+</html>
