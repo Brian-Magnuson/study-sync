@@ -11,11 +11,7 @@ export const topicsData: TopicsData[] = [
     name: 'Operating Systems',
     logo: '/topics-icons/operating-system.png',
   },
-  {
-    id: 'cen4721',
-    name: 'Human Computer Interaction',
-    logo: '/topics-icons/youtube.png',
-  },
+
 ]
 
 export const unjoinedTopicsData: TopicsData[] = [
@@ -28,7 +24,12 @@ export const unjoinedTopicsData: TopicsData[] = [
     id: 'enc3246',
     name: 'Professional Communication',
     logo: '/topics-icons/documents.png',
-  }
+  },
+  {
+    id: 'cen4721',
+    name: 'Human Computer Interaction',
+    logo: '/topics-icons/youtube.png',
+  },
 ]
 
 
