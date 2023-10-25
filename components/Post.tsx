@@ -24,9 +24,9 @@ export default function Post(props: PostProps) {
       <span className="material-symbols-outlined">
         draft
       </span>
-      <Link href={attachment.path}>
+      <a href={attachment.path} target='_blank' rel='noopener noreferrer'>
         {attachment.name}
-      </Link>
+      </a>
     </div>
   ));
 

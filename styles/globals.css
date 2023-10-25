@@ -324,12 +324,13 @@ h3 {
 
 .post__attachment {
   /* align */
-  max-width: 150px;
+  max-width: 240px;
   /* style */
   border: 1px solid lightgray;
   border-radius: 0.2rem;
   background: #efefef;
   color: gray;
+  word-break: break-all;
   /* content */
   display: flex;
   align-items: center;
