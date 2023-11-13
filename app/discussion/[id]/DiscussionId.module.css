@@ -64,12 +64,16 @@
 
 .discussion_page__posts {
   /* align */
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  /* grid-template-rows: auto; */
+  grid-gap: 0.8rem;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
   /* content */
   overflow-y: scroll;
-  display: flex;
-  flex-direction: column-reverse;
+  /* display: flex; */
+  /* flex-direction: column-reverse; */
   gap: 1rem;
 }
 

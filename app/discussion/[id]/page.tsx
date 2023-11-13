@@ -150,7 +150,7 @@ export default function DiscussionIdPage(props: DiscussionIdPageProps) {
         </fieldset>
 
         <div className={s.discussion_page__posts}>
-          {posts}
+          {posts.reverse()}
         </div>
 
         <div className={s.discussion_page__attachments}>

@@ -296,6 +296,7 @@ h3 {
   padding: 0.8rem;
   display: flex;
   gap: 0.8rem;
+
 }
 
 .post img {
@@ -335,4 +336,8 @@ h3 {
   display: flex;
   align-items: center;
   padding: 0.3rem;
+}
+
+.post__fileviewer{
+  width: 90%;
 }

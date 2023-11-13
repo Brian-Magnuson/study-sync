@@ -1,7 +1,11 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PostInfo } from '@/data/posts';
+import FileViewer from 'react-file-viewer';
+
 
 type PostProps = {
   postData: PostInfo;
@@ -18,6 +22,25 @@ export default function Post(props: PostProps) {
     hour12: true
   };
   const formattedDate = date.toLocaleString('en-US', options);
+  
+  const view = props.postData.attachments?.map((attachment, index) => { 
+    
+    if( attachment.path != null){
+      console.log(attachment.path)
+      return(
+        <div className= "post__fileview">
+          <iframe src={'http://localhost:3000' + attachment.path} width={'100%'} height={'300vh'}/>
+        </div>
+      )
+    }
+    else{
+      return(
+        <></>
+      )
+    }
+    });
+
+
 
   const attachments = props.postData.attachments?.map((attachment, index) => (
     <div className="post__attachment" key={index}>
@@ -27,6 +50,8 @@ export default function Post(props: PostProps) {
       <a href={attachment.path} target='_blank' rel='noopener noreferrer'>
         {attachment.name}
       </a>
+
+      
     </div>
   ));
 
@@ -48,8 +73,10 @@ export default function Post(props: PostProps) {
             </span>
           )}
         </div>
-        <p>{props.postData.content}</p>
+        {view}
         {attachments && attachments}
+        <p>{props.postData.content}</p>
+
       </div>
     </div>
   );
