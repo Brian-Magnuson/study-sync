@@ -21,21 +21,21 @@ export default function Post(props: PostProps) {
     hour12: true
   };
   const formattedDate = date.toLocaleString('en-US', options);
-  
-  const view = props.postData.attachments?.map((attachment, index) => { 
-    const viewableFiles: string[] = ["pdf","html","png","jpg"];
-    if( attachment.path != null && viewableFiles.includes(attachment.path.split('.').pop()||"") ){
+
+  const view = props.postData.attachments?.map((attachment, index) => {
+    const viewableFiles: string[] = ["pdf", "html", "png", "jpg"];
+    if (attachment.path != null && viewableFiles.includes(attachment.path.split('.').pop() || "")) {
       console.log(attachment.path)
       return (
-        <div className="post__fileview">
+        <div className="post__fileview" key={index}>
           <iframe src={'http://localhost:3000' + attachment.path} width={'100%'} height={'300vh'} />
         </div>
       )
     }
-    else{
-      return(
-        <div className= "post__fileview">
-          <img src={'http://localhost:3000/images/nprev.jpg'} width={'100%'} height={'300vh'}/>
+    else {
+      return (
+        <div className="post__fileview" key={index}>
+          <img src={'http://localhost:3000/images/nprev.jpg'} width={'100%'} height={'300vh'} />
         </div>
       )
     }
@@ -76,8 +76,8 @@ export default function Post(props: PostProps) {
         </div>
         {view}
         {attachments && attachments}
-        <p>{props.postData.content}</p>
 
+        <p>{props.postData.content}</p>
       </div>
     </div>
   );
