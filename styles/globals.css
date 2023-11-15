@@ -296,6 +296,7 @@ h3 {
   padding: 0.8rem;
   display: flex;
   gap: 0.8rem;
+  width:100%;
 
 }
 
@@ -321,6 +322,7 @@ h3 {
 .post__text p {
   /* align */
   margin-bottom: 10px;
+  overflow-wrap: break-word;
 }
 
 .post__attachment {

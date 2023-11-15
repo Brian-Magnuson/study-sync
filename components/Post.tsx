@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PostInfo } from '@/data/posts';
-import FileViewer from 'react-file-viewer';
 
 
 type PostProps = {
@@ -24,8 +23,8 @@ export default function Post(props: PostProps) {
   const formattedDate = date.toLocaleString('en-US', options);
   
   const view = props.postData.attachments?.map((attachment, index) => { 
-    
-    if( attachment.path != null){
+    const viewableFiles: string[] = ["pdf","html","png","jpg"];
+    if( attachment.path != null && viewableFiles.includes(attachment.path.split('.').pop()||"") ){
       console.log(attachment.path)
       return(
         <div className= "post__fileview">
@@ -35,7 +34,9 @@ export default function Post(props: PostProps) {
     }
     else{
       return(
-        <></>
+        <div className= "post__fileview">
+          <img src={'http://localhost:3000/images/nprev.jpg'} width={'100%'} height={'300vh'}/>
+        </div>
       )
     }
     });
