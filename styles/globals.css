@@ -280,6 +280,7 @@ h3 {
 
 .topic:hover {
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 .topic img {
@@ -361,6 +362,6 @@ h3 {
   margin-top: 20px;
 }
 
-.popup__buttons button{
+.popup__buttons button {
   margin-right: 10px;
 }
