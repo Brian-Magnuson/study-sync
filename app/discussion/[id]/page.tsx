@@ -1,6 +1,6 @@
 "use client";
 
-import Sidebar from '@/components/sidebar';
+import Sidebar from '@/components/Sidebar';
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
