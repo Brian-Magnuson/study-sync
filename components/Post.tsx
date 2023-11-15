@@ -26,9 +26,9 @@ export default function Post(props: PostProps) {
     const viewableFiles: string[] = ["pdf","html","png","jpg"];
     if( attachment.path != null && viewableFiles.includes(attachment.path.split('.').pop()||"") ){
       console.log(attachment.path)
-      return(
-        <div className= "post__fileview">
-          <iframe src={'http://localhost:3000' + attachment.path} width={'100%'} height={'300vh'}/>
+      return (
+        <div className="post__fileview">
+          <iframe src={'http://localhost:3000' + attachment.path} width={'100%'} height={'300vh'} />
         </div>
       )
     }
@@ -39,7 +39,7 @@ export default function Post(props: PostProps) {
         </div>
       )
     }
-    });
+  });
 
 
 
@@ -52,7 +52,7 @@ export default function Post(props: PostProps) {
         {attachment.name}
       </a>
 
-      
+
     </div>
   ));
 
