@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Begin by installing Node.js:
 https://nodejs.org/en/download
 
-Next, run the development server:
+Next, run the development server.  Execute the following command inside the the same directory this README is in.:
 
 ```bash
 npm run dev
