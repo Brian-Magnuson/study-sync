@@ -7,6 +7,10 @@ https://nodejs.org/en/download
 Next, run the development server.  Execute the following command inside the the same directory this README is in.:
 
 ```bash
+npm install
+```
+followed by
+```bash
 npm run dev
 ```
 
